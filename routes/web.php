@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/category', 'CategoryController@index');
+Route::get('/category/create', 'CategoryController@create');

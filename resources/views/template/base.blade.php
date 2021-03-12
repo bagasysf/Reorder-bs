@@ -15,13 +15,54 @@
     <!-- Bootstrap Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
 
-    <!-- Custom CSS -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <title>Reorder</title>
 </head>
 
 <body>
-    @yield('content')
+    <div class="row g-0 border">
+        <div class="col-4 col-sm-4 p-3 col-sm-3 col-lg-2 text-center">
+            <!-- Just an image -->
+            <a class="/" href="#">
+                <img class="img-fluid px-3" src="{{ asset('styles/img/brand/logo-reorder.svg') }}" alt="" />
+            </a>
+        </div>
+        <div class="col-5 col-sm-6 col-lg-8"></div>
+        <!-- Button collapse enable for phone, tablet -->
+        <div class="col-3 col-sm-2 d-flex justify-content-center navbar-icon d-flex d-lg-none">
+            <div class="row align-items-center">
+                <i class="bi bi-three-dots" style="font-size: 1.5rem; color: cornflowerblue;"></i>
+            </div>
+        </div>
+        <!-- Navbar icon enable for desktop -->
+        <div class="col-3 col-sm-2 d-flex justify-content-center navbar-icon d-none d-lg-flex">
+            <div class="row align-items-center">
+                <div class="col-lg-auto m-2"><i class="bi bi-bell" style="font-size: 1.5rem; color: cornflowerblue;"></i></div>
+                <div class="col-lg-auto m-2"><i class="bi bi-person" style="font-size: 1.8rem; color: cornflowerblue;"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="row g-0 content">
+        <!-- Sidebar disable for phone, tablet, but enabled for dekstop -->
+        <div class="col-lg-2 p-4 d-none d-lg-flex d-flex justify-content-center sidebar border">
+            <ul class="list-unstyled fw-bold">
+                <a class="text-decoration-none text-secondary" href="">
+                    <li class="py-2"><i class="bi bi-app-indicator pe-3" style="color: cornflowerblue;"></i>Dashboard</li>
+                </a>
+                <a class="text-decoration-none text-secondary" href="/category">
+                    <li class="py-2"><i class="bi bi-folder pe-3" style="color: cornflowerblue;"></i>Category</li>
+                </a>
+                <a class="text-decoration-none text-secondary" href="">
+                    <li class="py-2"><i class="bi bi-files-alt pe-3" style="color: cornflowerblue;"></i>Product</li>
+                </a>
+            </ul>
+        </div>
+        @yield('content')
+    </div>
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 

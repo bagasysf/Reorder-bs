@@ -1,0 +1,52 @@
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7rem;
+}
+.content .sidebar {
+    height: 100vh;
+}
+.content .sub-content .overflow-reorder {
+    overflow-x: auto;
+}
+
+.content .sub-content div table thead tr th, .content .sub-content div table tbody tr td {
+    font-size: 0.7rem;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    * {  
+        font-size: 0.8rem;
+    }
+    .content .sub-content div table thead tr th, .content .sub-content div table tbody tr td {
+        font-size: 0.7rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    * {  
+        font-size: 0.9rem;
+    }
+    .content .sub-content div table thead tr th, .content .sub-content div table tbody tr td {
+        font-size: 0.9rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    * {
+        font-size: 1rem;
+    }
+    .content .sub-content div table thead tr th, .content .sub-content div table tbody tr td {
+        font-size: 1rem;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}
