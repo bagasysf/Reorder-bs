@@ -42,13 +42,13 @@
                             <td class="text-center py-3">
                                 <a class="px-1 text-decoration-none text-dark" href="{{ url('category', $category->id) }}/edit"><i class="bi bi-pen" style="color: cornflowerblue;"></i></a>
                             </td>
-                            <form action="/category/{{$category->id}}" class="form-delete" method="POST">
-                                @csrf
-                                @method("DELETE")
-                                <td class="d-flex pe-3 py-2">
-                                    <button type="submit" class="px-1 text-dark btn btn-transparent" href=""><i class="bi bi-x-square" style="color: cornflowerblue;"></i></button>
-                                </td>
-                            </form>
+                            <td class="">
+                                <form action="/category/{{$category->id}}" method="POST">
+                                    @csrf
+                                    @method("DELETE")
+                                    <button type="submit" class="bg-transparent border border-0 pt-2" href=""><i class="bi bi-x-square" style="color: cornflowerblue;"></i></button>
+                                </form>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
