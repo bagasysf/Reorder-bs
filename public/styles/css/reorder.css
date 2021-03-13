@@ -15,13 +15,21 @@
     font-size: 0.7rem;
 }
 
+.content .sub-content .form-create input, .content .sub-content .form-create button, .content .sub-content .form-create a {
+    font-size: 0.7rem;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     * {  
         font-size: 0.8rem;
     }
     .content .sub-content div table thead tr th, .content .sub-content div table tbody tr td {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+    }
+
+    .content .sub-content .form-create input, .content .sub-content .form-create button, .content .sub-content .form-create a {
+        font-size: 0.8rem;
     }
 }
 
@@ -33,6 +41,10 @@
     .content .sub-content div table thead tr th, .content .sub-content div table tbody tr td {
         font-size: 0.9rem;
     }
+
+    .content .sub-content .form-create input, .content .sub-content .form-create button, .content .sub-content .form-create a {
+        font-size: 0.9rem;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -41,6 +53,10 @@
         font-size: 1rem;
     }
     .content .sub-content div table thead tr th, .content .sub-content div table tbody tr td {
+        font-size: 1rem;
+    }
+
+    .content .sub-content .form-create input, .content .sub-content .form-create button, .content .sub-content .form-create a {
         font-size: 1rem;
     }
 }

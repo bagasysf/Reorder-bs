@@ -10,22 +10,61 @@ class CategoryController extends Controller
     public function index()
     {
         $title = "Category";
-        $category = Category::all();
+        $categories = Category::paginate(5);
         return view('category.index', [
             'title' => $title,
-            'category' => $category
+            'categories' => $categories
         ]);
     }
 
     public function create()
     {
         $title = "Create Category";
-        $category = Category::all();
-        $sorted = $category->sortbyDesc('created_at');
-        $sorted->values()->all();
+        $categories = Category::orderBy('created_at', 'desc')->Paginate(3);
         return view('category.create', [
             'title' => $title,
-            'sorted' => $sorted
+            'categories' => $categories
         ]);
+    }
+
+    public function store()
+    {
+        Category::create([
+            'name' => request('name'),
+            'description' => request('description')
+        ]);
+
+        return redirect('category');
+    }
+
+    public function edit($id)
+    {
+        $title = "Edit Category";
+        $categoryid = Category::where('id', $id)->first();
+        $categories = Category::orderBy('created_at', 'desc')->Paginate(3);
+        return view('category.edit', [
+            'title' => $title,
+            'categoryid' => $categoryid,
+            'categories' => $categories
+        ]);
+    }
+
+    public function update($id)
+    {
+        $categoryid = Category::where('id', $id)->first();
+        $categoryid->update([
+            'name' => request('name'),
+            'description' => request('description')
+        ]);
+
+        return redirect('/category');
+    }
+
+    public function destroy($id)
+    {
+        $categoryid = Category::where('id', $id)->first();
+        $categoryid->delete();
+
+        return redirect('/category');
     }
 }

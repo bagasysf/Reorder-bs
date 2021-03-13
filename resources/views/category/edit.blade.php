@@ -9,13 +9,14 @@
                     <i class="bi bi-plus-square pe-2" style="color: cornflowerblue;"></i>{{$title}}
                 </div>
                 <div class="col-12 px-4 pb-4">
-                    <form action="/category" method="POST" class="form-create">
+                    <form action="/category/{{$categoryid->id}}" method="POST" class="form-create">
                         @csrf
-                        <input type="text" name="name" class="form-control rounded-0 my-4" placeholder="Category name" aria-label="First name">
-                        <input type="text" name="description" class="form-control rounded-0 my-4" placeholder="Description" aria-label="Last name">
+                        @method("PUT")
+                        <input type="text" name="name" class="form-control rounded-0 my-4" value="{{ $categoryid->name }}" aria-label="First name">
+                        <input type="text" name="description" class="form-control rounded-0 my-4" value="{{ $categoryid->description }}" aria-label="Last name">
                         <div class="d-flex justify-content-end">
                             <a href="/category" class="btn btn-white border text-secondary me-4 rounded-0">Cancel</a>
-                            <button type="submit" class="btn btn-white border text-secondary rounded-0">Create</button>
+                            <button type="submit" class="btn btn-white border text-secondary rounded-0">Update</button>
                         </div>
                     </form>
                 </div>
