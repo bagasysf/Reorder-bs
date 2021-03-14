@@ -24,8 +24,8 @@
         </div>
         <div class="col-12 col-lg-6 text-center fw-bold border">
             <div class="row g-0 py-3">
-                <div class="col-12">
-                    <i class="bi bi-list-ul pe-2" style="color: cornflowerblue;"></i>Last Created
+                <div class="col-12 ">
+                    <i class="bi bi-list-ul pe-2 text-dark"></i>Last Created
                 </div>
             </div>
             <div class="row g-0">

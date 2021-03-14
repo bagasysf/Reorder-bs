@@ -14,8 +14,8 @@
                         <input type="text" name="name" class="form-control rounded-0 my-4" placeholder="Category name" aria-label="First name">
                         <input type="text" name="description" class="form-control rounded-0 my-4" placeholder="Description" aria-label="Last name">
                         <div class="d-flex justify-content-end">
-                            <a href="/category" class="btn btn-white border text-secondary me-4 rounded-0">Cancel</a>
-                            <button type="submit" class="btn btn-white border text-secondary rounded-0">Create</button>
+                            <a href="/category" class="btn btn-white border text-secondary button-cancel me-4 rounded-0">Cancel</a>
+                            <button type="submit" class="btn btn-white border text-secondary button-submit rounded-0">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -24,7 +24,7 @@
         <div class="col-12 col-lg-6 text-center fw-bold border">
             <div class="row g-0 py-3">
                 <div class="col-12">
-                    <i class="bi bi-list-ul pe-2" style="color: cornflowerblue;"></i>Last Created
+                    <i class="bi bi-list-ul pe-2"></i>Last Created
                 </div>
             </div>
             <div class="row g-0">

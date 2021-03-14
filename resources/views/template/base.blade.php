@@ -23,10 +23,10 @@
 </head>
 
 <body>
-    <div class="row g-0 border">
+    <div class="row g-0 border base-layout">
         <div class="col-4 col-sm-4 p-3 col-sm-3 col-lg-2 text-center">
             <!-- Just an image -->
-            <a class="/" href="#">
+            <a href="/">
                 <img class="img-fluid px-3" src="{{ asset('styles/img/brand/logo-reorder.svg') }}" alt="" />
             </a>
         </div>
@@ -40,8 +40,16 @@
         <!-- Navbar icon enable for desktop -->
         <div class="col-3 col-sm-2 d-flex justify-content-center navbar-icon d-none d-lg-flex">
             <div class="row align-items-center">
-                <div class="col-lg-auto m-2"><i class="bi bi-bell" style="font-size: 1.5rem; color: cornflowerblue;"></i></div>
-                <div class="col-lg-auto m-2"><i class="bi bi-person" style="font-size: 1.8rem; color: cornflowerblue;"></i></div>
+                <div class="col-lg-auto m-2">
+                    <a class="bell-icon" href="#">
+                        <i class="bi bi-bell text-dark" style="font-size: 1.5rem;"></i>
+                    </a>
+                </div>
+                <div class="col-lg-auto m-2">
+                    <a href="" class="person-icon">
+                        <i class="bi bi-person text-dark" style="font-size: 1.8rem;"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -49,13 +57,13 @@
         <!-- Sidebar disable for phone, tablet, but enabled for dekstop -->
         <div class="col-lg-2 p-4 d-none d-lg-flex d-flex justify-content-center sidebar border">
             <ul class="list-unstyled fw-bold">
-                <a class="text-decoration-none text-secondary" href="">
+                <a class="text-decoration-none {{request()->is('/')?'active': 'text-dark'}}" href="/">
                     <li class="py-2"><i class="bi bi-app-indicator pe-3" style="color: cornflowerblue;"></i>Dashboard</li>
                 </a>
-                <a class="text-decoration-none text-secondary" href="/category">
+                <a class="text-decoration-none {{request()->is('category')?'active': 'text-dark'}}" href="/category">
                     <li class="py-2"><i class="bi bi-folder pe-3" style="color: cornflowerblue;"></i>Category</li>
                 </a>
-                <a class="text-decoration-none text-secondary" href="">
+                <a class="text-decoration-none {{request()->is('product')?'active': 'text-dark'}}" href="/product">
                     <li class="py-2"><i class="bi bi-files-alt pe-3" style="color: cornflowerblue;"></i>Product</li>
                 </a>
             </ul>
