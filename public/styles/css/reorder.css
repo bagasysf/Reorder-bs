@@ -1,20 +1,23 @@
 /* X-Small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 0.7rem;
 }
 .active {
     color: cornflowerblue;
 }
-/* Navbar Hover */
-.base-layout div a img:hover {
+
+/* Navbar Start */
+.navbar-brand-img-garvice:hover {
     margin-left: 0.5rem;
 }
-/* Navbar Icon Hover */
-.base-layout .navbar-icon .row .col-lg-auto .bell-icon i:hover, .base-layout .navbar-icon .row .col-lg-auto .person-icon i:hover {
+.link-navbar-icon-garvice .icon-bell-garvice:hover,
+.link-navbar-icon-garvice .icon-person-garvice:hover {
     color: cornflowerblue !important;
 }
+/* Navbar End */
+
 .content .sidebar {
     height: 100vh;
 }
@@ -25,59 +28,85 @@
 /* Add New Category Hover  */
 .content .sub-content div .header-new:hover {
     color: cornflowerblue !important;
-    background-color: #E8F0FE;
-
+    background-color: #e8f0fe;
 }
 .content .sub-content .overflow-reorder {
     overflow-x: auto;
 }
 /* Table Font Size */
-.content .sub-content div table thead tr th, .content .sub-content div table tbody tr td {
+.content .sub-content div table thead tr th,
+.content .sub-content div table tbody tr td {
     font-size: 0.7rem;
 }
 /* Form Font Size */
-.content .sub-content .form-create input, .content .sub-content .form-create button, .content .sub-content .form-create a {
+.content .sub-content .form-create input,
+.content .sub-content .form-create button,
+.content .sub-content .form-create a {
     font-size: 0.7rem;
 }
 /* Table Edit & Delete Hover */
-.content .sub-content .row .col-12 .overflow-reorder table tbody tr td .edit-icon:hover, .content .sub-content .row .col-12 .overflow-reorder table tbody tr td .delete-icon:hover {
+.content
+    .sub-content
+    .row
+    .col-12
+    .overflow-reorder
+    table
+    tbody
+    tr
+    td
+    .edit-icon:hover,
+.content
+    .sub-content
+    .row
+    .col-12
+    .overflow-reorder
+    table
+    tbody
+    tr
+    td
+    .delete-icon:hover {
     color: cornflowerblue !important;
 }
 /* Cancel Button Hover */
 .content .sub-content .row .col-12 .row .col-12 .form-create a:hover {
-    background-color: #FAF9F8;
+    background-color: #faf9f8;
 }
 /* Submit Button Hover */
 .content .sub-content .row .col-12 .row .col-12 .form-create button:hover {
-    background-color: #E8F0FE;
+    background-color: #e8f0fe;
     color: cornflowerblue !important;
-
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-    * {  
+    * {
         font-size: 0.8rem;
     }
-    .content .sub-content div table thead tr th, .content .sub-content div table tbody tr td {
+    .content .sub-content div table thead tr th,
+    .content .sub-content div table tbody tr td {
         font-size: 0.8rem;
     }
 
-    .content .sub-content .form-create input, .content .sub-content .form-create button, .content .sub-content .form-create a {
+    .content .sub-content .form-create input,
+    .content .sub-content .form-create button,
+    .content .sub-content .form-create a {
         font-size: 0.8rem;
     }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    * {  
+    * {
         font-size: 0.9rem;
     }
-    .content .sub-content div table thead tr th, .content .sub-content div table tbody tr td {
+    .content .sub-content div table thead tr th,
+    .content .sub-content div table tbody tr td {
         font-size: 0.9rem;
     }
 
-    .content .sub-content .form-create input, .content .sub-content .form-create button, .content .sub-content .form-create a {
+    .content .sub-content .form-create input,
+    .content .sub-content .form-create button,
+    .content .sub-content .form-create a {
         font-size: 0.9rem;
     }
 }
@@ -87,17 +116,22 @@
     * {
         font-size: 1rem;
     }
-    .content .sub-content div table thead tr th, .content .sub-content div table tbody tr td {
+    .content .sub-content div table thead tr th,
+    .content .sub-content div table tbody tr td {
         font-size: 1rem;
     }
 
-    .content .sub-content .form-create input, .content .sub-content .form-create button, .content .sub-content .form-create a {
+    .content .sub-content .form-create input,
+    .content .sub-content .form-create button,
+    .content .sub-content .form-create a {
         font-size: 1rem;
     }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+}
 
 /* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {}
+@media (min-width: 1400px) {
+}

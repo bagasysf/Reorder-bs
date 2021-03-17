@@ -23,36 +23,44 @@
 </head>
 
 <body>
-    <div class="row g-0 border base-layout">
-        <div class="col-4 col-sm-4 p-3 col-sm-3 col-lg-2 text-center">
-            <!-- Just an image -->
-            <a href="/">
-                <img class="img-fluid px-3" src="{{ asset('styles/img/brand/logo-reorder.svg') }}" alt="" />
+
+    <!-- Navbar Section Start -->
+    <div class="row g-0 border navbar-garvice">
+        <div class="col-4 col-sm-4 p-3 col-sm-3 col-lg-2 navbar-brand-garvice">
+            <a href="/" class="navbar-brand-link-garvice">
+                <img class="img-fluid px-3 navbar-brand-img-garvice" src="{{ asset('styles/img/brand/logo-reorder.svg') }}" alt="" />
             </a>
         </div>
-        <div class="col-5 col-sm-6 col-lg-8"></div>
-        <!-- Button collapse enable for phone, tablet -->
-        <div class="col-3 col-sm-2 d-flex justify-content-center navbar-icon d-flex d-lg-none">
-            <div class="row align-items-center">
+
+        <div class="col-5 col-sm-6 col-lg-8 navbar-empty-garvice"></div>
+
+        <!-- Navbar Icon for Phone & Tablet Start -->
+        <div class="col-3 col-sm-2 d-flex justify-content-center d-flex d-lg-none navbar-icon-garvice">
+            <div class="row align-items-center box-navbar-icon-garvice">
                 <i class="bi bi-three-dots" style="font-size: 1.5rem; color: cornflowerblue;"></i>
             </div>
         </div>
-        <!-- Navbar icon enable for desktop -->
-        <div class="col-3 col-sm-2 d-flex justify-content-center navbar-icon d-none d-lg-flex">
-            <div class="row align-items-center">
-                <div class="col-lg-auto m-2">
-                    <a class="bell-icon" href="#">
-                        <i class="bi bi-bell text-dark" style="font-size: 1.5rem;"></i>
+        <!-- Navbar Icon for Phone & Tablet End -->
+
+        <!-- Navbar Icon for Desktop Start -->
+        <div class="col-3 col-sm-2 d-flex justify-content-center d-none d-lg-flex navbar-icon-garvice">
+            <div class="row align-items-center box-navbar-icon-garvice">
+                <div class="col-lg-auto m-2 box-icon-garvice">
+                    <a href="#" class="link-navbar-icon-garvice">
+                        <i class="bi bi-bell text-dark icon-bell-garvice" style="font-size: 1.5rem;"></i>
                     </a>
                 </div>
-                <div class="col-lg-auto m-2">
-                    <a href="" class="person-icon">
-                        <i class="bi bi-person text-dark" style="font-size: 1.8rem;"></i>
+                <div class="col-lg-auto m-2 box-icon-garvice">
+                    <a href="#" class="link-navbar-icon-garvice">
+                        <i class="bi bi-person text-dark icon-person-garvice" style="font-size: 1.8rem;"></i>
                     </a>
                 </div>
             </div>
         </div>
+        <!-- Navbar Icon for Dekstop End -->
     </div>
+    <!-- Navbar Section End -->
+
     <div class="row g-0 content">
         <!-- Sidebar disable for phone, tablet, but enabled for dekstop -->
         <div class="col-lg-2 p-4 d-none d-lg-flex d-flex justify-content-center sidebar border">
