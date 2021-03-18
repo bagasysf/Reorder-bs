@@ -5,6 +5,7 @@
 * {
   font-family: "Roboto", sans-serif;
   font-size: 0.7rem;
+  color: #0f3057;
 }
 
 .active {
@@ -12,10 +13,6 @@
 }
 
 /* Navbar Style Start */
-
-.navbar-garvice .navbar-garvice-brand-img:hover {
-  margin-left: 0.5rem;
-}
 
 .navbar-garvice .navbar-garvice-icon-bell,
 .navbar-garvice .navbar-garvice-icon-person,
@@ -29,12 +26,6 @@
   color: cornflowerblue;
 }
 
-.navbar-garvice .navbar-garvice-icon-bell:active,
-.navbar-garvice .navbar-garvice-icon-person:active,
-.navbar-garvice .navbar-garvice-icon-three-dots:active {
-  color: cornflowerblue;
-}
-
 /* Navbar Style End */
 
 /* Sidebar Style Start */
@@ -44,39 +35,52 @@
   background-color: #f3f2f1;
 }
 
-.sidebar-garvice .sidebar-garvice-link {
-  color: #0f3057;
-  background-color: #d3ddf6 !important;
+.sidebar-garvice .sidebar-garvice-box {
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
-.sidebar-garvice .sidebar-garvice-link:hover {
+.sidebar-garvice .sidebar-garvice-box-link {
+  color: #0f3057;
+}
+
+.sidebar-garvice .sidebar-garvice-box-link:hover {
   color: cornflowerblue;
+  background-color: #EDEBE9;
 }
 
 /* Sidebar Style End */
 
 /* Content Style Start  */
 
-.content-garvice .content-garvice-table-header,
-.content-garvice .content-garvice-table-link-add {
+.content-garvice {
+  background-color: #FAF9F8;
+}
+
+.content-garvice .content-garvice-header,
+.content-garvice .content-garvice-link-add {
   background-color: #f3f2f1;
 }
 
-.content-garvice .content-garvice-table-link-add:hover {
-  border-color: #d3ddf6;
-  background-color: #d3ddf6;
-  color: #0f3057;
+.content-garvice .content-garvice-link-add:hover {
+  border-color: #EDEBE9;
+  background-color: #EDEBE9;
+  color: #0f3057 !important;
 }
 
-.content .sub-content .overflow-reorder {
-  overflow-x: auto;
+.content-garvice .content-garvice-overflow {
+  overflow-x: auto !important;
 }
 
-/* Table Font Size */
+.content-garvice .content-garvice-table tr:hover {
+  background-color: #fff;
+}
 
-.content .sub-content div table thead tr th,
-.content .sub-content div table tbody tr td {
-  font-size: 0.7rem;
+.content-garvice .content-garvice-table-icon-edit:hover,
+.content-garvice .content-garvice-table-icon-delete:hover {
+  color: cornflowerblue;
 }
 
 /* Form Font Size */

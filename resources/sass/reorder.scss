@@ -6,6 +6,7 @@
 * {
     font-family: "Roboto", sans-serif;
     font-size: 0.7rem;
+    color: $text-color;
 }
 
 .active {
@@ -14,12 +15,6 @@
 
 /* Navbar Style Start */
 .navbar-garvice {
-    & &-brand {
-        &-img:hover {
-            margin-left: 0.5rem;
-        }
-    }
-
     & &-icon {
         &-bell,
         &-person,
@@ -27,10 +22,6 @@
             color: $icon-color;
 
             &:hover {
-                color: $icon-color-hover;
-            }
-
-            &:active {
                 color: $icon-color-hover;
             }
         }
@@ -42,43 +33,59 @@
 .sidebar-garvice {
     height: 100vh;
     background-color: $background-secondary;
+    
+    & &-box {
+        width: 100vw;
+        height: fit-content;
 
-    & &-link {
-        color: $text-color;
-        background-color: $background-hover !important;
-
-        &:hover {
-            color: $text-color-hover;
+        &-link {
+            color: $text-color;
+    
+            &:hover {
+                color: $text-color-hover;
+                background-color: $background-hover;
+            }
         }
     }
+
 }
 /* Sidebar Style End */
 
 /* Content Style Start  */
+// Index Page Start
 .content-garvice {
-    & &-table {
-        &-header,
-        &-link-add {
-            background-color: $background-secondary;
+    background-color: $background-content;
+
+    & &-header,
+    & &-link-add {
+        background-color: $background-secondary;
+    }
+    & &-link-add {
+        &:hover {
+            border-color: $border-hover;
+            background-color: $background-hover;
+            color: $text-color !important;
         }
-        &-link-add {
+    }
+
+    & &-overflow {
+        overflow-x: auto !important;
+    }
+
+    & &-table {
+        & tr:hover {
+            background-color: #fff;
+        }
+        &-icon-edit,
+        &-icon-delete {
             &:hover {
-                border-color: $border-hover;
-                background-color: $background-hover;
-                color: $text-color;
+                color: $icon-color-hover;
             }
         }
     }
 }
-.content .sub-content .overflow-reorder {
-    overflow-x: auto;
-}
+// Index Page End
 
-/* Table Font Size */
-.content .sub-content div table thead tr th,
-.content .sub-content div table tbody tr td {
-    font-size: 0.7rem;
-}
 /* Form Font Size */
 .content .sub-content .form-create input,
 .content .sub-content .form-create button,

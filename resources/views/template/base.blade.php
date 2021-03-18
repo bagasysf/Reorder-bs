@@ -26,9 +26,9 @@
 <body>
 
     <!-- Navbar Section Start -->
-    <div class="row g-0 navbar-garvice">
-        <div class="col-4 col-sm-4 p-3 col-sm-3 col-lg-2 navbar-garvice-brand">
-            <a href="/">
+    <div class="row g-0 navbar-garvice ">
+        <div class="col-4 col-sm-4 p-3 col-sm-3 col-lg-2 navbar-garvice-brand d-flex justify-content-center">
+            <a href="/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="General Affair Service">
                 <img class="img-fluid px-3 navbar-garvice-brand-img" src="{{ asset('img/brand/logo-reorder.svg') }}" alt="" />
             </a>
         </div>
@@ -67,8 +67,30 @@
     <!-- Content Section Start -->
     <div class="row g-0">
         <!-- Sidebar for Desktop Start -->
-        <div class="col-lg-2 p-4 d-none d-lg-flex d-flex justify-content-center sidebar-garvice">
-            <ul class="list-unstyled fw-bold">
+        <div class="col-lg-2 d-none d-lg-flex justify-content-center sidebar-garvice">
+            <ul class="row g-0 list-unstyled sidebar-garvice-box">
+                <div href="/" class="text-decoration-none text-start py-3">
+                    <li class="fw-bold px-5">
+                        <i class="pe-3"></i>
+                    </li>
+                </div>
+                <a href="/" class="text-decoration-none text-start py-3 sidebar-garvice-box-link">
+                    <li class="fw-bold px-5">
+                        <i class="bi bi-app-indicator pe-3"></i>Dashboard
+                    </li>
+                </a>
+                <a href="/category" class="text-decoration-none text-start py-3 sidebar-garvice-box-link">
+                    <li class="fw-bold px-5">
+                        <i class="bi bi-folder pe-3"></i>Category
+                    </li>
+                </a>
+                <a href="/product" class="text-decoration-none text-start py-3 sidebar-garvice-box-link">
+                    <li class="fw-bold px-5">
+                        <i class="bi bi-files-alt pe-3"></i>Product
+                    </li>
+                </a>
+            </ul>
+            <!-- <ul class="list-unstyled fw-bold">
                 <a class="text-decoration-none sidebar-garvice-link" href="/">
                     <li class="py-2"><i class="bi bi-app-indicator pe-3"></i>Dashboard</li>
                 </a>
@@ -78,7 +100,7 @@
                 <a class="text-decoration-none sidebar-garvice-link" href="/product">
                     <li class="py-2"><i class="bi bi-files-alt pe-3"></i>Product</li>
                 </a>
-            </ul>
+            </ul> -->
         </div>
         @yield('content')
     </div>
