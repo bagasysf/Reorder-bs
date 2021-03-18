@@ -1,0 +1,150 @@
+/* X-Small devices (portrait phones, less than 576px) */
+
+/* No media query for `xs` since this is the default in Bootstrap */
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.7rem;
+}
+
+.active {
+  color: cornflowerblue;
+}
+
+/* Navbar Style Start */
+
+.navbar-garvice .navbar-garvice-brand-img:hover {
+  margin-left: 0.5rem;
+}
+
+.navbar-garvice .navbar-garvice-icon-bell,
+.navbar-garvice .navbar-garvice-icon-person {
+  color: cornflowerblue !important;
+}
+
+.navbar-garvice .navbar-garvice-icon-bell:hover,
+.navbar-garvice .navbar-garvice-icon-person:hover {
+  color: #0f3057 !important;
+}
+
+/* Navbar Style End */
+
+/* Sidebar Style Start */
+
+.sidebar-garvice {
+  height: 100vh;
+}
+
+.sidebar-garvice .sidebar-garvice-list-item:hover {
+  color: cornflowerblue;
+}
+
+/* Sidebar Style End */
+
+/* Add New Category Hover  */
+
+.content .sub-content div .header-new:hover {
+  color: cornflowerblue !important;
+  background-color: #e8f0fe;
+}
+
+.content .sub-content .overflow-reorder {
+  overflow-x: auto;
+}
+
+/* Table Font Size */
+
+.content .sub-content div table thead tr th,
+.content .sub-content div table tbody tr td {
+  font-size: 0.7rem;
+}
+
+/* Form Font Size */
+
+.content .sub-content .form-create input,
+.content .sub-content .form-create button,
+.content .sub-content .form-create a {
+  font-size: 0.7rem;
+}
+
+/* Table Edit & Delete Hover */
+
+.content .sub-content .row .col-12 .overflow-reorder table tbody tr td .edit-icon:hover,
+.content .sub-content .row .col-12 .overflow-reorder table tbody tr td .delete-icon:hover {
+  color: cornflowerblue !important;
+}
+
+/* Cancel Button Hover */
+
+.content .sub-content .row .col-12 .row .col-12 .form-create a:hover {
+  background-color: #faf9f8;
+}
+
+/* Submit Button Hover */
+
+.content .sub-content .row .col-12 .row .col-12 .form-create button:hover {
+  background-color: #e8f0fe;
+  color: cornflowerblue !important;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {
+  * {
+    font-size: 0.8rem;
+  }
+
+  .content .sub-content div table thead tr th,
+  .content .sub-content div table tbody tr td {
+    font-size: 0.8rem;
+  }
+
+  .content .sub-content .form-create input,
+  .content .sub-content .form-create button,
+  .content .sub-content .form-create a {
+    font-size: 0.8rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+  * {
+    font-size: 0.9rem;
+  }
+
+  .content .sub-content div table thead tr th,
+  .content .sub-content div table tbody tr td {
+    font-size: 0.9rem;
+  }
+
+  .content .sub-content .form-create input,
+  .content .sub-content .form-create button,
+  .content .sub-content .form-create a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+  * {
+    font-size: 1rem;
+  }
+
+  .content .sub-content div table thead tr th,
+  .content .sub-content div table tbody tr td {
+    font-size: 1rem;
+  }
+
+  .content .sub-content .form-create input,
+  .content .sub-content .form-create button,
+  .content .sub-content .form-create a {
+    font-size: 1rem;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+

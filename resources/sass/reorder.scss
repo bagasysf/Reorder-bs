@@ -4,27 +4,46 @@
     font-family: "Roboto", sans-serif;
     font-size: 0.7rem;
 }
+$icon-color: cornflowerblue;
+$icon-color-hover: #0f3057;
+$text-color-hover: cornflowerblue;
+
 .active {
     color: cornflowerblue;
 }
 
-/* Navbar Start */
-.navbar-brand-img-garvice:hover {
-    margin-left: 0.5rem;
+/* Navbar Style Start */ 
+.navbar-garvice {
+    & &-brand {
+        &-img:hover {
+            margin-left: 0.5rem;
+        }
+    }
+    
+    & &-icon {
+        &-bell,
+        &-person {
+            color: $icon-color !important;
+        }
+        
+        &-bell:hover,
+        &-person:hover {
+            color: $icon-color-hover !important;
+        }
+    }
 }
-.link-navbar-icon-garvice .icon-bell-garvice:hover,
-.link-navbar-icon-garvice .icon-person-garvice:hover {
-    color: cornflowerblue !important;
-}
-/* Navbar End */
+/* Navbar Style End */
 
-.content .sidebar {
+/* Sidebar Style Start */
+.sidebar-garvice {
     height: 100vh;
+
+    & &-list-item:hover {
+        color: $text-color-hover;
+    }
 }
-/* Sidebar Hover */
-.content .sidebar ul a li:hover {
-    color: cornflowerblue !important;
-}
+/* Sidebar Style End */
+
 /* Add New Category Hover  */
 .content .sub-content div .header-new:hover {
     color: cornflowerblue !important;

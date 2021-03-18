@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ asset('styles/css/reorder.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/reorder.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" /> -->
 
     <!-- Bootstrap Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
@@ -26,33 +27,33 @@
 
     <!-- Navbar Section Start -->
     <div class="row g-0 border navbar-garvice">
-        <div class="col-4 col-sm-4 p-3 col-sm-3 col-lg-2 navbar-brand-garvice">
-            <a href="/" class="navbar-brand-link-garvice">
-                <img class="img-fluid px-3 navbar-brand-img-garvice" src="{{ asset('styles/img/brand/logo-reorder.svg') }}" alt="" />
+        <div class="col-4 col-sm-4 p-3 col-sm-3 col-lg-2 navbar-garvice-brand">
+            <a href="/">
+                <img class="img-fluid px-3 navbar-garvice-brand-img" src="{{ asset('img/brand/logo-reorder.svg') }}" alt="" />
             </a>
         </div>
 
-        <div class="col-5 col-sm-6 col-lg-8 navbar-empty-garvice"></div>
+        <div class="col-5 col-sm-6 col-lg-8"></div>
 
         <!-- Navbar Icon for Phone & Tablet Start -->
-        <div class="col-3 col-sm-2 d-flex justify-content-center d-flex d-lg-none navbar-icon-garvice">
-            <div class="row align-items-center box-navbar-icon-garvice">
+        <div class="col-3 col-sm-2 d-flex justify-content-center d-flex d-lg-none navbar-garvice-icon">
+            <div class="row align-items-center">
                 <i class="bi bi-three-dots" style="font-size: 1.5rem; color: cornflowerblue;"></i>
             </div>
         </div>
         <!-- Navbar Icon for Phone & Tablet End -->
 
         <!-- Navbar Icon for Desktop Start -->
-        <div class="col-3 col-sm-2 d-flex justify-content-center d-none d-lg-flex navbar-icon-garvice">
-            <div class="row align-items-center box-navbar-icon-garvice">
-                <div class="col-lg-auto m-2 box-icon-garvice">
-                    <a href="#" class="link-navbar-icon-garvice">
-                        <i class="bi bi-bell text-dark icon-bell-garvice" style="font-size: 1.5rem;"></i>
+        <div class="col-3 col-sm-2 d-flex justify-content-center d-none d-lg-flex navbar-garvice-icon">
+            <div class="row align-items-center">
+                <div class="col-lg-auto m-2">
+                    <a href="">
+                        <i class="bi bi-bell navbar-garvice-icon-bell" style="font-size: 1.5rem;"></i>
                     </a>
                 </div>
-                <div class="col-lg-auto m-2 box-icon-garvice">
-                    <a href="#" class="link-navbar-icon-garvice">
-                        <i class="bi bi-person text-dark icon-person-garvice" style="font-size: 1.8rem;"></i>
+                <div class="col-lg-auto m-2">
+                    <a href="">
+                        <i class=" bi bi-person navbar-garvice-icon-person" style="font-size: 1.8rem;"></i>
                     </a>
                 </div>
             </div>
@@ -61,18 +62,18 @@
     </div>
     <!-- Navbar Section End -->
 
-    <div class="row g-0 content">
+    <div class="row g-0">
         <!-- Sidebar disable for phone, tablet, but enabled for dekstop -->
-        <div class="col-lg-2 p-4 d-none d-lg-flex d-flex justify-content-center sidebar border">
+        <div class="col-lg-2 p-4 d-none d-lg-flex d-flex justify-content-center border sidebar-garvice">
             <ul class="list-unstyled fw-bold">
                 <a class="text-decoration-none {{request()->is('/')?'active': 'text-dark'}}" href="/">
-                    <li class="py-2"><i class="bi bi-app-indicator pe-3" style="color: cornflowerblue;"></i>Dashboard</li>
+                    <li class="py-2 sidebar-garvice-list-item"><i class="bi bi-app-indicator sidebar-garvice-list-item-icon-app-indicator pe-3" style="color: cornflowerblue;"></i>Dashboard</li>
                 </a>
-                <a class="text-decoration-none {{request()->is('category')?'active': 'text-dark'}}" href="/category">
-                    <li class="py-2"><i class="bi bi-folder pe-3" style="color: cornflowerblue;"></i>Category</li>
+                <a class="text-decoration-none {{request()->is('category')?'active': 'text-dark'}} sidebar-link-garvice" href="/category">
+                    <li class="py-2 sidebar-garvice-list-item"><i class="bi bi-folder pe-3" style="color: cornflowerblue;"></i>Category</li>
                 </a>
-                <a class="text-decoration-none {{request()->is('product')?'active': 'text-dark'}}" href="/product">
-                    <li class="py-2"><i class="bi bi-files-alt pe-3" style="color: cornflowerblue;"></i>Product</li>
+                <a class="text-decoration-none {{request()->is('product')?'active': 'text-dark'}} sidebar-link-garvice" href="/product">
+                    <li class="py-2 sidebar-garvice-list-item"><i class="bi bi-files-alt pe-3" style="color: cornflowerblue;"></i>Product</li>
                 </a>
             </ul>
         </div>
@@ -83,7 +84,7 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
