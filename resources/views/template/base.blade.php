@@ -26,7 +26,7 @@
 <body>
 
     <!-- Navbar Section Start -->
-    <div class="row g-0 border navbar-garvice">
+    <div class="row g-0 navbar-garvice">
         <div class="col-4 col-sm-4 p-3 col-sm-3 col-lg-2 navbar-garvice-brand">
             <a href="/">
                 <img class="img-fluid px-3 navbar-garvice-brand-img" src="{{ asset('img/brand/logo-reorder.svg') }}" alt="" />
@@ -38,7 +38,9 @@
         <!-- Navbar Icon for Phone & Tablet Start -->
         <div class="col-3 col-sm-2 d-flex justify-content-center d-flex d-lg-none navbar-garvice-icon">
             <div class="row align-items-center">
-                <i class="bi bi-three-dots" style="font-size: 1.5rem; color: cornflowerblue;"></i>
+                <a href="">
+                    <i class="bi bi-three-dots navbar-garvice-icon-three-dots" style="font-size: 1.5rem;"></i>
+                </a>
             </div>
         </div>
         <!-- Navbar Icon for Phone & Tablet End -->
@@ -62,18 +64,19 @@
     </div>
     <!-- Navbar Section End -->
 
+    <!-- Content Section Start -->
     <div class="row g-0">
-        <!-- Sidebar disable for phone, tablet, but enabled for dekstop -->
-        <div class="col-lg-2 p-4 d-none d-lg-flex d-flex justify-content-center border sidebar-garvice">
+        <!-- Sidebar for Desktop Start -->
+        <div class="col-lg-2 p-4 d-none d-lg-flex d-flex justify-content-center sidebar-garvice">
             <ul class="list-unstyled fw-bold">
-                <a class="text-decoration-none {{request()->is('/')?'active': 'text-dark'}}" href="/">
-                    <li class="py-2 sidebar-garvice-list-item"><i class="bi bi-app-indicator sidebar-garvice-list-item-icon-app-indicator pe-3" style="color: cornflowerblue;"></i>Dashboard</li>
+                <a class="text-decoration-none sidebar-garvice-link" href="/">
+                    <li class="py-2"><i class="bi bi-app-indicator pe-3"></i>Dashboard</li>
                 </a>
-                <a class="text-decoration-none {{request()->is('category')?'active': 'text-dark'}} sidebar-link-garvice" href="/category">
-                    <li class="py-2 sidebar-garvice-list-item"><i class="bi bi-folder pe-3" style="color: cornflowerblue;"></i>Category</li>
+                <a class="text-decoration-none sidebar-garvice-link" href="/category">
+                    <li class="py-2"><i class="bi bi-folder pe-3"></i>Category</li>
                 </a>
-                <a class="text-decoration-none {{request()->is('product')?'active': 'text-dark'}} sidebar-link-garvice" href="/product">
-                    <li class="py-2 sidebar-garvice-list-item"><i class="bi bi-files-alt pe-3" style="color: cornflowerblue;"></i>Product</li>
+                <a class="text-decoration-none sidebar-garvice-link" href="/product">
+                    <li class="py-2"><i class="bi bi-files-alt pe-3"></i>Product</li>
                 </a>
             </ul>
         </div>

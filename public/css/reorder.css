@@ -8,7 +8,7 @@
 }
 
 .active {
-  color: cornflowerblue;
+  color: cornflowerblue !important;
 }
 
 /* Navbar Style Start */
@@ -18,13 +18,21 @@
 }
 
 .navbar-garvice .navbar-garvice-icon-bell,
-.navbar-garvice .navbar-garvice-icon-person {
-  color: cornflowerblue !important;
+.navbar-garvice .navbar-garvice-icon-person,
+.navbar-garvice .navbar-garvice-icon-three-dots {
+  color: #0f3057;
 }
 
 .navbar-garvice .navbar-garvice-icon-bell:hover,
-.navbar-garvice .navbar-garvice-icon-person:hover {
-  color: #0f3057 !important;
+.navbar-garvice .navbar-garvice-icon-person:hover,
+.navbar-garvice .navbar-garvice-icon-three-dots:hover {
+  color: cornflowerblue;
+}
+
+.navbar-garvice .navbar-garvice-icon-bell:active,
+.navbar-garvice .navbar-garvice-icon-person:active,
+.navbar-garvice .navbar-garvice-icon-three-dots:active {
+  color: cornflowerblue;
 }
 
 /* Navbar Style End */
@@ -33,19 +41,31 @@
 
 .sidebar-garvice {
   height: 100vh;
+  background-color: #f3f2f1;
 }
 
-.sidebar-garvice .sidebar-garvice-list-item:hover {
+.sidebar-garvice .sidebar-garvice-link {
+  color: #0f3057;
+  background-color: #d3ddf6 !important;
+}
+
+.sidebar-garvice .sidebar-garvice-link:hover {
   color: cornflowerblue;
 }
 
 /* Sidebar Style End */
 
-/* Add New Category Hover  */
+/* Content Style Start  */
 
-.content .sub-content div .header-new:hover {
-  color: cornflowerblue !important;
-  background-color: #e8f0fe;
+.content-garvice .content-garvice-table-header,
+.content-garvice .content-garvice-table-link-add {
+  background-color: #f3f2f1;
+}
+
+.content-garvice .content-garvice-table-link-add:hover {
+  border-color: #d3ddf6;
+  background-color: #d3ddf6;
+  color: #0f3057;
 }
 
 .content .sub-content .overflow-reorder {

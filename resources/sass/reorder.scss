@@ -1,34 +1,38 @@
 /* X-Small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
+@import "reorder-variables.scss";
+@import "reorder-mixin.scss";
+
 * {
     font-family: "Roboto", sans-serif;
     font-size: 0.7rem;
 }
-$icon-color: cornflowerblue;
-$icon-color-hover: #0f3057;
-$text-color-hover: cornflowerblue;
 
 .active {
-    color: cornflowerblue;
+    color: cornflowerblue !important;
 }
 
-/* Navbar Style Start */ 
+/* Navbar Style Start */
 .navbar-garvice {
     & &-brand {
         &-img:hover {
             margin-left: 0.5rem;
         }
     }
-    
+
     & &-icon {
         &-bell,
-        &-person {
-            color: $icon-color !important;
-        }
-        
-        &-bell:hover,
-        &-person:hover {
-            color: $icon-color-hover !important;
+        &-person,
+        &-three-dots {
+            color: $icon-color;
+
+            &:hover {
+                color: $icon-color-hover;
+            }
+
+            &:active {
+                color: $icon-color-hover;
+            }
         }
     }
 }
@@ -37,21 +41,39 @@ $text-color-hover: cornflowerblue;
 /* Sidebar Style Start */
 .sidebar-garvice {
     height: 100vh;
+    background-color: $background-secondary;
 
-    & &-list-item:hover {
-        color: $text-color-hover;
+    & &-link {
+        color: $text-color;
+        background-color: $background-hover !important;
+
+        &:hover {
+            color: $text-color-hover;
+        }
     }
 }
 /* Sidebar Style End */
 
-/* Add New Category Hover  */
-.content .sub-content div .header-new:hover {
-    color: cornflowerblue !important;
-    background-color: #e8f0fe;
+/* Content Style Start  */
+.content-garvice {
+    & &-table {
+        &-header,
+        &-link-add {
+            background-color: $background-secondary;
+        }
+        &-link-add {
+            &:hover {
+                border-color: $border-hover;
+                background-color: $background-hover;
+                color: $text-color;
+            }
+        }
+    }
 }
 .content .sub-content .overflow-reorder {
     overflow-x: auto;
 }
+
 /* Table Font Size */
 .content .sub-content div table thead tr th,
 .content .sub-content div table tbody tr td {

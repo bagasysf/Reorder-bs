@@ -1,15 +1,15 @@
 @extends('template.base')
 
 @section('content')
-<div class="col-12 col-lg-10 sub-content g-0">
-    <div class="row g-0 border">
-        <div class="col-8 text-center py-3 border fw-bold">
+<div class="col-12 col-lg-10 g-0 content-garvice">
+    <div class="row g-0">
+        <div class="col-8 text-center py-3 fw-bold content-garvice-table-header">
             <i class="bi bi-list-ul pe-2"></i>List Category
         </div>
-        <a href="/category/create" class="text-decoration-none text-dark col-4 col-sm-4 text-center py-3 border fw-bold header-new">
+        <a href="/category/create" class="text-decoration-none text-dark col-4 col-sm-4 text-center py-3 fw-bold content-garvice-table-link-add">
             <i class="bi bi-plus-square pe-2"></i>Add New Category
         </a>
-        <div class="col-12 border">
+        <div class="col-12">
             <div class="overflow-reorder">
                 <table class="table table-borderless caption-top">
                     <thead>
