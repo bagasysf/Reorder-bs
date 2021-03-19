@@ -26,7 +26,7 @@
 <body>
 
     <!-- Navbar Section Start -->
-    <div class="row g-0 navbar-garvice ">
+    <div class="row g-0 navbar-garvice border">
         <div class="col-4 col-sm-4 p-3 col-sm-3 col-lg-2 navbar-garvice-brand d-flex justify-content-center">
             <a href="/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="General Affair Service">
                 <img class="img-fluid px-3 navbar-garvice-brand-img" src="{{ asset('img/brand/logo-reorder.svg') }}" alt="" />
@@ -46,18 +46,14 @@
         <!-- Navbar Icon for Phone & Tablet End -->
 
         <!-- Navbar Icon for Desktop Start -->
-        <div class="col-3 col-sm-2 d-flex justify-content-center d-none d-lg-flex navbar-garvice-icon">
-            <div class="row align-items-center">
-                <div class="col-lg-auto m-2">
-                    <a href="">
-                        <i class="bi bi-bell navbar-garvice-icon-bell" style="font-size: 1.5rem;"></i>
-                    </a>
-                </div>
-                <div class="col-lg-auto m-2">
-                    <a href="">
-                        <i class=" bi bi-person navbar-garvice-icon-person" style="font-size: 1.8rem;"></i>
-                    </a>
-                </div>
+        <div class="col-3 col-sm-2 d-flex justify-content-end d-none d-lg-flex navbar-garvice-icon">
+            <div class="row g-0 align-items-center">
+                <a href="" class="col-lg-auto px-3 d-flex align-items-center navbar-garvice-icon-box">
+                    <i class="bi bi-bell navbar-garvice-icon-bell" style="font-size: 1.5rem;"></i>
+                </a>
+                <a href="" class="col-lg-auto px-3 d-flex align-items-center navbar-garvice-icon-box">
+                    <i class=" bi bi-person navbar-garvice-icon-person" style="font-size: 1.8rem;"></i>
+                </a>
             </div>
         </div>
         <!-- Navbar Icon for Dekstop End -->
@@ -67,7 +63,7 @@
     <!-- Content Section Start -->
     <div class="row g-0">
         <!-- Sidebar for Desktop Start -->
-        <div class="col-lg-2 d-none d-lg-flex justify-content-center sidebar-garvice">
+        <div class="col-lg-2 d-none d-lg-flex justify-content-center sidebar-garvice border">
             <ul class="row g-0 list-unstyled sidebar-garvice-box">
                 <div href="/" class="text-decoration-none text-start py-3">
                     <li class="fw-bold px-5">
@@ -90,17 +86,6 @@
                     </li>
                 </a>
             </ul>
-            <!-- <ul class="list-unstyled fw-bold">
-                <a class="text-decoration-none sidebar-garvice-link" href="/">
-                    <li class="py-2"><i class="bi bi-app-indicator pe-3"></i>Dashboard</li>
-                </a>
-                <a class="text-decoration-none sidebar-garvice-link" href="/category">
-                    <li class="py-2"><i class="bi bi-folder pe-3"></i>Category</li>
-                </a>
-                <a class="text-decoration-none sidebar-garvice-link" href="/product">
-                    <li class="py-2"><i class="bi bi-files-alt pe-3"></i>Product</li>
-                </a>
-            </ul> -->
         </div>
         @yield('content')
     </div>

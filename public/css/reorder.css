@@ -10,16 +10,23 @@
 
 /* Navbar Style Start */
 
+.navbar-garvice .navbar-garvice-icon-box {
+  height: 100%;
+}
+
+.navbar-garvice .navbar-garvice-icon-box:hover {
+  background-color: #0f3057;
+}
+
+.navbar-garvice .navbar-garvice-icon-box:hover .navbar-garvice-icon-bell,
+.navbar-garvice .navbar-garvice-icon-box:hover .navbar-garvice-icon-person {
+  color: white !important;
+}
+
 .navbar-garvice .navbar-garvice-icon-bell,
 .navbar-garvice .navbar-garvice-icon-person,
 .navbar-garvice .navbar-garvice-icon-three-dots {
-  color: #0f3057;
-}
-
-.navbar-garvice .navbar-garvice-icon-bell:hover,
-.navbar-garvice .navbar-garvice-icon-person:hover,
-.navbar-garvice .navbar-garvice-icon-three-dots:hover {
-  color: cornflowerblue;
+  color: #ef4f4f;
 }
 
 /* Navbar Style End */
@@ -75,7 +82,7 @@
 }
 
 .content-garvice .content-garvice-table tr:hover {
-  background-color: #fff;
+  background-color: #F1F4FC !important;
 }
 
 .content-garvice .content-garvice-table-icon-edit:hover,

@@ -12,14 +12,20 @@
 /* Navbar Style Start */
 .navbar-garvice {
     & &-icon {
+        &-box {
+            height: 100%;
+
+            &:hover {
+                .navbar-garvice-icon-bell, .navbar-garvice-icon-person {
+                    color: white !important;
+                }
+                background-color: $text-color;
+            }
+        }
         &-bell,
         &-person,
         &-three-dots {
-            color: $icon-color;
-
-            &:hover {
-                color: $icon-color-hover;
-            }
+            color: #ef4f4f;
         }
     }
 }
@@ -73,7 +79,7 @@
 
     & &-table {
         & tr:hover {
-            background-color: #fff;
+            background-color: #F1F4FC !important;
         }
         &-icon-edit,
         &-icon-delete {

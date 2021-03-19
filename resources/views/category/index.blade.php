@@ -3,13 +3,13 @@
 @section('content')
 <div class="col-12 col-lg-10 g-0 content-garvice">
     <div class="row g-0">
-        <div class="col-8 text-center py-3 fw-bold content-garvice-header">
+        <div class="col-8 text-center py-3 fw-bold content-garvice-header border">
             <i class="bi bi-list-ul pe-2"></i>List Category
         </div>
-        <a href="/category/create" class="text-decoration-none text-dark col-4 col-sm-4 text-center py-3 fw-bold content-garvice-link-add">
+        <a href="/category/create" class="text-decoration-none text-dark col-4 col-sm-4 text-center py-3 fw-bold content-garvice-link-add border">
             <i class="bi bi-plus-square pe-2"></i>Add New Category
         </a>
-        <div class="col-12">
+        <div class="col-12 border">
             <div class="content-garvice-overflow">
                 <table class="table table-borderless content-garvice-table">
                     <thead>
