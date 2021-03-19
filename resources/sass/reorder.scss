@@ -31,6 +31,27 @@
 }
 /* Navbar Style End */
 
+// Secondary Navbar Start
+.secnavbar-garvice {
+    background-color: $background-secondary;
+    & &-ul {
+        height: 100% !important;
+        & .active {
+            font-weight: 600 !important;
+            background-color: $background-active !important;
+        }
+    }
+    & &-link {
+
+        height: 100% !important;
+        color: $text-color;
+        &:hover {
+            background-color: $background-hover;
+        }
+    }
+}
+// Secondary Navbar End
+
 /* Sidebar Style Start */
 .sidebar-garvice {
     height: 100vh;
@@ -59,12 +80,6 @@
 /* Content Style Start  */
 // Index Page Start
 .content-garvice {
-    background-color: $background-content;
-
-    & &-header,
-    & &-link-add {
-        background-color: $background-secondary;
-    }
     & &-link-add {
         &:hover {
             border-color: $border-hover;
@@ -79,11 +94,7 @@
 
     & &-table {
         & tr:hover {
-<<<<<<< HEAD
             background-color: #F1F4FC !important;
-=======
-            background-color: #f1f4fc;
->>>>>>> 6b2f36266c8adbce48bca37860de2dcb7382864b
         }
         &-icon-edit,
         &-icon-delete {
@@ -99,9 +110,9 @@
     & .page-link {
         color: $text-color !important;
         &:focus {
-            outline: none !important;
-            border: none !important;
-            box-shadow: none !important;
+            outline: none;
+            border: none;
+            box-shadow: none;
         }
     }
     & .active {
@@ -110,9 +121,9 @@
             background-color: $background-active !important;
 
             &:focus {
-                outline: none !important;
-                border: none !important;
-                box-shadow: none !important;
+                outline: none;
+                border: none;
+                box-shadow: none;
             }
         }
     }

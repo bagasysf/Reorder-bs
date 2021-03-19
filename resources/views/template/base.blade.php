@@ -58,6 +58,24 @@
         </div>
         <!-- Navbar Icon for Dekstop End -->
     </div>
+    <div class="row g-0 secnavbar-garvice">
+        <div class="col-12">
+            <ul class="d-flex flex-row list-unstyled justify-content-end secnavbar-garvice-ul">
+                <a href="" class="d-flex align-items-center text-decoration-none fw-light px-5 secnavbar-garvice-link active">
+                    <li>Warehouse</li>
+                </a>
+                <a href="" class="d-flex align-items-center text-decoration-none fw-light px-5 secnavbar-garvice-link">
+                    <li>Housekeeping</li>
+                </a>
+                <a href="" class="d-flex align-items-center text-decoration-none fw-light px-5 secnavbar-garvice-link">
+                    <li>Maintenance</li>
+                </a>
+                <a href="" class="d-flex align-items-center text-decoration-none fw-light px-5 secnavbar-garvice-link">
+                    <li>Mechanic</li>
+                </a>
+            </ul>
+        </div>
+    </div>
     <!-- Navbar Section End -->
 
     <!-- Content Section Start -->
@@ -65,11 +83,11 @@
         <!-- Sidebar for Desktop Start -->
         <div class="col-lg-2 d-none d-lg-flex justify-content-center sidebar-garvice border">
             <ul class="row g-0 list-unstyled sidebar-garvice-box">
-                <div href="/" class="text-decoration-none text-start py-3">
+                <!-- <div href="/" class="text-decoration-none text-start py-3">
                     <li class="fw-bold px-5">
                         <i class="pe-3"></i>
                     </li>
-                </div>
+                </div> -->
                 <a href="/" class="text-decoration-none text-start py-3 sidebar-garvice-box-link {{request()->is('/')?'active': ''}}">
                     <li class="fw-bold px-5">
                         <i class="bi bi-app-indicator pe-3"></i>Dashboard
