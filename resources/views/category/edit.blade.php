@@ -43,9 +43,9 @@
                     </ul>
                     @endforeach
                     <div class="row g-0 justify-content-center pt-3">
-                        <div class="col-auto">
+                        <div class="col-auto fw-normal">
                             <span style="width: 30px;">
-                                {{ $categories->links() }}
+                                {{ $categories->links('vendor.pagination.garvice-pagination') }}
                             </span>
                         </div>
                     </div>

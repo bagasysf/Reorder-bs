@@ -8,11 +8,6 @@
   color: #0f3057;
 }
 
-.active {
-  color: cornflowerblue !important;
-  background-color: #f3f2f1 !important;
-}
-
 /* Navbar Style Start */
 
 .navbar-garvice .navbar-garvice-icon-bell,
@@ -43,13 +38,17 @@
   height: fit-content;
 }
 
+.sidebar-garvice .sidebar-garvice-box .active {
+  background-color: #d3ddf6 !important;
+}
+
 .sidebar-garvice .sidebar-garvice-box-link {
   color: #0f3057;
 }
 
 .sidebar-garvice .sidebar-garvice-box-link:hover {
   color: cornflowerblue;
-  background-color: #EDEBE9;
+  background-color: #edebe9;
 }
 
 /* Sidebar Style End */
@@ -57,7 +56,7 @@
 /* Content Style Start  */
 
 .content-garvice {
-  background-color: #FAF9F8;
+  background-color: #faf9f8;
 }
 
 .content-garvice .content-garvice-header,
@@ -66,8 +65,8 @@
 }
 
 .content-garvice .content-garvice-link-add:hover {
-  border-color: #EDEBE9;
-  background-color: #EDEBE9;
+  border-color: #edebe9;
+  background-color: #edebe9;
   color: #0f3057 !important;
 }
 
@@ -82,6 +81,27 @@
 .content-garvice .content-garvice-table-icon-edit:hover,
 .content-garvice .content-garvice-table-icon-delete:hover {
   color: cornflowerblue;
+}
+
+.pagination-garvice .page-link {
+  color: #0f3057 !important;
+}
+
+.pagination-garvice .page-link:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.pagination-garvice .active .page-link {
+  color: #0f3057 !important;
+  background-color: #d3ddf6 !important;
+}
+
+.pagination-garvice .active .page-link:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* Form Font Size */

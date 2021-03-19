@@ -9,11 +9,6 @@
     color: $text-color;
 }
 
-.active {
-    color: cornflowerblue !important;
-    background-color: $background-secondary !important;
-}
-
 /* Navbar Style Start */
 .navbar-garvice {
     & &-icon {
@@ -34,21 +29,24 @@
 .sidebar-garvice {
     height: 100vh;
     background-color: $background-secondary;
-    
+
     & &-box {
         width: 100vw;
         height: fit-content;
 
+        & .active {
+            background-color: $background-active !important;
+        }
+
         &-link {
             color: $text-color;
-    
+
             &:hover {
                 color: $text-color-hover;
                 background-color: $background-hover;
             }
         }
     }
-
 }
 /* Sidebar Style End */
 
@@ -86,6 +84,29 @@
     }
 }
 // Index Page End
+
+.pagination-garvice {
+    & .page-link {
+        color: $text-color !important;
+        &:focus {
+            outline: none !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+    }
+    & .active {
+        .page-link {
+            color: $text-color !important;
+            background-color: $background-active !important;
+
+            &:focus {
+                outline: none !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+        }
+    }
+}
 
 /* Form Font Size */
 .content .sub-content .form-create input,

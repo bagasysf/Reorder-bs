@@ -8,10 +8,10 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/reorder.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" />
+    <!-- <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" /> -->
 
     <!-- Bootstrap CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
 
     <!-- Bootstrap Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
@@ -74,17 +74,17 @@
                         <i class="pe-3"></i>
                     </li>
                 </div>
-                <a href="/" class="text-decoration-none text-start py-3 sidebar-garvice-box-link">
+                <a href="/" class="text-decoration-none text-start py-3 sidebar-garvice-box-link {{request()->is('/')?'active': ''}}">
                     <li class="fw-bold px-5">
                         <i class="bi bi-app-indicator pe-3"></i>Dashboard
                     </li>
                 </a>
-                <a href="/category" class="text-decoration-none text-start py-3 sidebar-garvice-box-link">
+                <a href="/category" class="text-decoration-none text-start py-3 sidebar-garvice-box-link {{request()->is('category')?'active': ''}}">
                     <li class="fw-bold px-5">
                         <i class="bi bi-folder pe-3"></i>Category
                     </li>
                 </a>
-                <a href="/product" class="text-decoration-none text-start py-3 sidebar-garvice-box-link">
+                <a href="/product" class="text-decoration-none text-start py-3 sidebar-garvice-box-link {{request()->is('product')?'active': ''}}">
                     <li class="fw-bold px-5">
                         <i class="bi bi-files-alt pe-3"></i>Product
                     </li>
@@ -109,8 +109,8 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="{{ asset('js/bootstrap.js') }}"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> -->
+    <!-- <script src="{{ asset('js/bootstrap.js') }}"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
