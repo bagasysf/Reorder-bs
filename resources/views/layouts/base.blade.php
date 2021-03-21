@@ -6,9 +6,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ asset('css/reorder.css') }}" />
-    <!-- <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" /> -->
+    <!-- <link rel="stylesheet" href="{{ asset('css/reorder.css') }}" /> -->
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
@@ -26,51 +28,51 @@
 <body>
 
     <!-- Navbar Section Start -->
-    <div class="row g-0 navbar-garvice border">
-        <div class="col-4 col-sm-4 p-3 col-sm-3 col-lg-2 navbar-garvice-brand d-flex justify-content-center">
-            <a href="/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="General Affair Service">
-                <img class="img-fluid px-3 navbar-garvice-brand-img" src="{{ asset('img/brand/logo-reorder.svg') }}" alt="" />
+    <div class="row g-0 border garvice-navbar">
+        <div class="col-4 col-sm-4 py-3 col-sm-3 col-lg-2 garvice-navbar-brand d-flex justify-content-start">
+            <a href="/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="General Affair Service" class="ps-4">
+                <img class="img-fluid garvice-navbar-brand-img" src="{{ asset('img/brand/logo-reorder.svg') }}" alt="" />
             </a>
         </div>
 
         <div class="col-5 col-sm-6 col-lg-8"></div>
 
         <!-- Navbar Icon for Phone & Tablet Start -->
-        <div class="col-3 col-sm-2 d-flex justify-content-center d-flex d-lg-none navbar-garvice-icon">
-            <div class="row align-items-center">
-                <a href="">
-                    <i class="bi bi-three-dots navbar-garvice-icon-three-dots" style="font-size: 1.5rem;"></i>
+        <div class="col-3 col-sm-2 d-flex justify-content-end d-flex d-lg-none garvice-navbar-icon">
+            <div class="row g-0 align-items-center">
+                <a href="" class="col-lg-auto d-flex align-items-center px-3 garvice-navbar-icon-box-xm">
+                    <i class="bi bi-three-dots garvice-navbar-icon-three-dots" style="font-size: 1.5rem;"></i>
                 </a>
             </div>
         </div>
         <!-- Navbar Icon for Phone & Tablet End -->
 
         <!-- Navbar Icon for Desktop Start -->
-        <div class="col-3 col-sm-2 d-flex justify-content-end d-none d-lg-flex navbar-garvice-icon">
+        <div class="col-3 col-sm-2 justify-content-end d-none d-lg-flex garvice-navbar-icon">
             <div class="row g-0 align-items-center">
-                <a href="" class="col-lg-auto px-3 d-flex align-items-center navbar-garvice-icon-box">
-                    <i class="bi bi-bell navbar-garvice-icon-bell" style="font-size: 1.5rem;"></i>
+                <a href="" class="col-lg-auto d-flex align-items-center px-3 garvice-navbar-icon-box">
+                    <i class="bi bi-bell garvice-navbar-icon-bell" style="font-size: 1.5rem;"></i>
                 </a>
-                <a href="" class="col-lg-auto px-3 d-flex align-items-center navbar-garvice-icon-box">
-                    <i class=" bi bi-person navbar-garvice-icon-person" style="font-size: 1.8rem;"></i>
+                <a href="" class="col-lg-auto d-flex align-items-center px-3 garvice-navbar-icon-box">
+                    <i class=" bi bi-person garvice-navbar-icon-person" style="font-size: 1.8rem;"></i>
                 </a>
             </div>
         </div>
         <!-- Navbar Icon for Dekstop End -->
     </div>
-    <div class="row g-0 secnavbar-garvice">
+    <div class="row g-0 garvice-navbarsec">
         <div class="col-12">
-            <ul class="d-flex flex-row list-unstyled justify-content-end secnavbar-garvice-ul">
-                <a href="" class="d-flex align-items-center text-decoration-none fw-light px-5 secnavbar-garvice-link active">
+            <ul class="d-flex flex-row list-unstyled justify-content-end garvice-navbarsec-ul">
+                <a href="" class="d-flex align-items-center text-decoration-none fw-light px-2 px-sm-3 px-lg-5 garvice-navbarsec-link active">
                     <li>Warehouse</li>
                 </a>
-                <a href="" class="d-flex align-items-center text-decoration-none fw-light px-5 secnavbar-garvice-link">
+                <a href="" class="d-flex align-items-center text-decoration-none fw-light px-2 px-sm-3 px-lg-5 garvice-navbarsec-link">
                     <li>Housekeeping</li>
                 </a>
-                <a href="" class="d-flex align-items-center text-decoration-none fw-light px-5 secnavbar-garvice-link">
+                <a href="" class="d-flex align-items-center text-decoration-none fw-light px-2 px-sm-3 px-lg-5 garvice-navbarsec-link">
                     <li>Maintenance</li>
                 </a>
-                <a href="" class="d-flex align-items-center text-decoration-none fw-light px-5 secnavbar-garvice-link">
+                <a href="" class="d-flex align-items-center text-decoration-none fw-light px-2 px-sm-3 px-lg-5 garvice-navbarsec-link">
                     <li>Mechanic</li>
                 </a>
             </ul>
@@ -81,25 +83,20 @@
     <!-- Content Section Start -->
     <div class="row g-0">
         <!-- Sidebar for Desktop Start -->
-        <div class="col-lg-2 d-none d-lg-flex justify-content-center sidebar-garvice border">
-            <ul class="row g-0 list-unstyled sidebar-garvice-box">
-                <!-- <div href="/" class="text-decoration-none text-start py-3">
-                    <li class="fw-bold px-5">
-                        <i class="pe-3"></i>
-                    </li>
-                </div> -->
-                <a href="/" class="text-decoration-none text-start py-3 sidebar-garvice-box-link {{request()->is('/')?'active': ''}}">
-                    <li class="fw-bold px-5">
+        <div class="col-lg-2 d-none d-lg-flex justify-content-start border garvice-sidebar">
+            <ul class="row g-0 list-unstyled garvice-sidebar-box">
+                <a href="/" class="text-decoration-none text-start py-3 ps-4 garvice-sidebar-box-link {{request()->is('/')?'active': ''}}">
+                    <li class="fw-bold">
                         <i class="bi bi-app-indicator pe-3"></i>Dashboard
                     </li>
                 </a>
-                <a href="/category" class="text-decoration-none text-start py-3 sidebar-garvice-box-link {{request()->is('category')?'active': ''}}">
-                    <li class="fw-bold px-5">
+                <a href="{{ url('admin/category') }}" class="text-decoration-none text-start py-3 ps-4 garvice-sidebar-box-link {{request()->is('admin/category')?'active': ''}}">
+                    <li class="fw-bold">
                         <i class="bi bi-folder pe-3"></i>Category
                     </li>
                 </a>
-                <a href="/product" class="text-decoration-none text-start py-3 sidebar-garvice-box-link {{request()->is('product')?'active': ''}}">
-                    <li class="fw-bold px-5">
+                <a href="{{ url('admin/product') }}" class="text-decoration-none text-start py-3 ps-4 garvice-sidebar-box-link {{request()->is('admin/product')?'active': ''}}">
+                    <li class="fw-bold">
                         <i class="bi bi-files-alt pe-3"></i>Product
                     </li>
                 </a>

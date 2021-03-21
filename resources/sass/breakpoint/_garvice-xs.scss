@@ -1,0 +1,150 @@
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+* {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.7rem;
+    color: $text-color;
+}
+
+// Pagination Style Start
+.pagination-garvice {
+    & .page-link {
+        color: $text-color !important;
+        &:focus {
+            outline: none;
+            border: none;
+            box-shadow: none;
+        }
+    }
+    & .active {
+        .page-link {
+            color: $text-color !important;
+            background-color: $background-active !important;
+
+            &:focus {
+                outline: none;
+                border: none;
+                box-shadow: none;
+            }
+        }
+    }
+}
+// Pagination Style End
+
+// Navbar Style Start
+.garvice-navbar {
+    & &-icon {
+        &-box-xm {
+            height: 100%;
+        }
+        &-box {
+            height: 100%;
+
+            &:hover {
+                .garvice-navbar-icon-bell, .garvice-navbar-icon-person {
+                    color: white !important;
+                }
+                background-color: $text-color;
+            }
+        }
+        &-bell,
+        &-person,
+        &-three-dots {
+            color: #ef4f4f;
+        }
+    }
+}
+// Navbar Style End
+
+// Secondary Navbar Start
+.garvice-navbarsec {
+    background-color: $background-secondary;
+    & &-ul  {
+        height: 100% !important;
+    }
+    & &-link {
+        color: $text-color;
+        &:hover {
+            background-color: $background-hover;
+        }
+    }
+    & .active {
+            font-weight: 600 !important;
+            background-color: $background-active;
+        }
+
+}
+// Secondary Navbar End
+
+// Sidebar Style Start
+.garvice-sidebar {
+    height: 100vh;
+    background-color: $background-secondary;
+
+    & &-box {
+        width: 100vw;
+        height: fit-content !important;
+        
+        & .active {
+            background-color: $background-active !important;
+        }
+        
+        &-link {
+            color: $text-color;
+
+            &:hover {
+                color: $text-color-hover;
+                background-color: $background-hover;
+            }
+        }
+    }
+}
+// Sidebar Style End
+
+// Content Style Start
+.garvice-content {
+    & &-link-add {
+        &:hover {
+            border-color: $border-hover;
+            background-color: $background-hover;
+            color: $text-color !important;
+        }
+    }
+
+    & &-overflow {
+        overflow-x: auto !important;
+    }
+
+    & &-table {
+        & tr:hover {
+            background-color: #F1F4FC !important;
+        }
+        &-icon-edit,
+        &-icon-delete {
+            &:hover {
+                color: $icon-color-hover;
+            }
+        }
+    }
+    & &-form {  
+        & input,
+        & button,
+        & a {
+            font-size: 0.7rem;
+        }
+
+        &-link {
+            &:hover {
+                background-color: $background-hover;
+            }
+        }
+        &-button {
+            background-color: $text-color;
+            color: white !important;
+            &:hover {
+                background-color: #ef4f4f;
+            }
+        }
+    }
+}
+// Content Style End

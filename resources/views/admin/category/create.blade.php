@@ -1,21 +1,21 @@
-@extends('template.base')
+@extends('layouts.base')
 
 @section('content')
-<div class="col-12 col-lg-10 sub-content">
+<div class="col-12 col-lg-10 garvice-content">
     <div class="row g-0 border">
         <div class="col-12 col-lg-6 text-center fw-bold border">
             <div class="row g-0">
                 <div class="col-12 py-3">
-                    <i class="bi bi-plus-square pe-2" style="color: cornflowerblue;"></i>{{$title}}
+                    <i class="bi bi-plus-square pe-2"></i>{{$title}}
                 </div>
                 <div class="col-12 px-4 pb-4">
-                    <form action="/category" method="POST" class="form-create">
+                    <form action="{{ url('admin/category') }}" method="POST" class="garvice-content-form">
                         @csrf
                         <input type="text" name="name" class="form-control rounded-0 my-4" placeholder="Category name" aria-label="First name">
                         <input type="text" name="description" class="form-control rounded-0 my-4" placeholder="Description" aria-label="Last name">
                         <div class="d-flex justify-content-end">
-                            <a href="/category" class="btn btn-white border text-secondary button-cancel me-4 rounded-0">Cancel</a>
-                            <button type="submit" class="btn btn-white border text-secondary button-submit rounded-0">Submit</button>
+                            <a href="{{ url('admin/category') }}" class="btn btn-white border text-secondary garvice-content-form-link me-4 rounded-0">Cancel</a>
+                            <button type="submit" class="btn btn-white border text-secondary garvice-content-form-button rounded-0">Submit</button>
                         </div>
                     </form>
                 </div>

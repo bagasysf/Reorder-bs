@@ -1,17 +1,17 @@
-@extends('template.base')
+@extends('layouts.base')
 
 @section('content')
-<div class="col-12 col-lg-10 g-0 content-garvice border">
+<div class="col-12 col-lg-10 g-0 border garvice-content">
     <div class="row g-0">
-        <div class="col-8 text-center py-3 fw-bold content-garvice-header">
+        <div class="col-8 text-center py-3 fw-bold garvice-content-header">
             <i class="bi bi-list-ul pe-2"></i>List Category
         </div>
-        <a href="/category/create" class="text-decoration-none text-dark col-4 col-sm-4 text-center py-3 fw-bold content-garvice-link-add">
+        <a href="{{ url('admin/category/create') }}" class="text-decoration-none text-dark col-4 col-sm-4 text-center py-3 fw-bold garvice-content-link-add">
             <i class="bi bi-plus-square pe-2"></i>Add New Category
         </a>
         <div class="col-12">
-            <div class="content-garvice-overflow">
-                <table class="table table-borderless content-garvice-table">
+            <div class="garvice-content-overflow">
+                <table class="table table-borderless garvice-content-table">
                     <thead>
                         <tr>
                             <th class="py-3 ps-3">No</th>
@@ -38,13 +38,13 @@
                             <td class="py-3">{{$category->created_at}}</td>
                             <td class="py-3">{{$category->updated_at}}</td>
                             <td class="text-center py-3">
-                                <a class="px-1 text-decoration-none" href="{{ url('category', $category->id) }}/edit"><i class="bi bi-pen content-garvice-table-icon-edit"></i></a>
+                                <a class="px-1 text-decoration-none" href="{{ url('admin/category', $category->id) }}/edit"><i class="bi bi-pen garvice-content-table-icon-edit"></i></a>
                             </td>
                             <td>
-                                <form action="/category/{{$category->id}}" method="POST">
+                                <form action="{{ url('admin/category', $category->id) }}" method="POST">
                                     @csrf
                                     @method("DELETE")
-                                    <button type="submit" class="bg-transparent border border-0 text-dark pt-2" href=""><i class="bi bi-x-square content-garvice-table-icon-delete"></i></button>
+                                    <button type="submit" class="bg-transparent border border-0 text-dark pt-2" href=""><i class="bi bi-x-square garvice-content-table-icon-delete"></i></button>
                                 </form>
                             </td>
                         </tr>

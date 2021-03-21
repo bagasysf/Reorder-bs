@@ -1,22 +1,22 @@
-@extends('template.base')
+@extends('layouts.base')
 
 @section('content')
-<div class="col-12 col-lg-10 sub-content">
+<div class="col-12 col-lg-10 garvice-content">
     <div class="row g-0 border">
         <div class="col-12 col-lg-6 text-center fw-bold border">
             <div class="row g-0">
                 <div class="col-12 py-3">
-                    <i class="bi bi-plus-square pe-2" style="color: cornflowerblue;"></i>{{$title}}
+                    <i class="bi bi-plus-square pe-2"></i>{{$title}}
                 </div>
                 <div class="col-12 px-4 pb-4">
-                    <form action="/category/{{$categoryid->id}}" method="POST" class="form-create">
+                    <form action="{{ url('admin/category', $categoryid->id) }}" method="POST" class="garvice-content-form">
                         @csrf
                         @method("PUT")
                         <input type="text" name="name" class="form-control rounded-0 my-4" value="{{ $categoryid->name }}" aria-label="First name">
                         <input type="text" name="description" class="form-control rounded-0 my-4" value="{{ $categoryid->description }}" aria-label="Last name">
                         <div class="d-flex justify-content-end">
-                            <a href="/category" class="btn btn-white border text-secondary me-4 rounded-0">Cancel</a>
-                            <button type="submit" class="btn btn-white border text-secondary rounded-0">Update</button>
+                            <a href="{{ url('admin/category') }}" class="btn btn-white border text-secondary me-4 rounded-0 garvice-content-form-link">Cancel</a>
+                            <button type="submit" class="btn btn-white border text-secondary rounded-0 garvice-content-form-button">Update</button>
                         </div>
                     </form>
                 </div>

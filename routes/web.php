@@ -14,12 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('admin.dashboard.index');
 });
 
-Route::get('category', 'CategoryController@index');
-Route::get('category/create', 'CategoryController@create');
-Route::post('category', 'CategoryController@store');
-Route::get('category/{id}/edit', 'CategoryController@edit');
-Route::put('category/{id}', 'CategoryController@update');
-Route::delete('category/{id}', 'CategoryController@destroy');
+Route::get('admin/category', 'CategoryController@index');
+Route::get('admin/category/create', 'CategoryController@create');
+Route::post('admin/category', 'CategoryController@store');
+Route::get('admin/category/{id}/edit', 'CategoryController@edit');
+Route::put('admin/category/{id}', 'CategoryController@update');
+Route::delete('admin/category/{id}', 'CategoryController@destroy');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
