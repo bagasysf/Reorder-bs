@@ -37390,7 +37390,8 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+// require('./bootstrap');
+__webpack_require__(/*! /resources/js/bootstrap */ "./resources/js/bootstrap.js");
 
 /***/ }),
 
