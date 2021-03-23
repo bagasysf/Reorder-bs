@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="col-12 col-lg-10 garvice-content">
-    <div class="row g-0 border">
+    <div class="row g-0">
         <div class="col-12 col-lg-6 text-center fw-bold border">
             <div class="row g-0">
                 <div class="col-12 py-3">

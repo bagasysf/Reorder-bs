@@ -3,4 +3,15 @@
     * {
         font-size: 1rem !important;
     }
+
+    .garvice-navbar {
+        & &-icon {
+            &-bell {
+                font-size: 1.5rem !important;
+            }
+            &-person {
+                font-size: 1.8rem !important;
+            }
+        }
+    }
 }

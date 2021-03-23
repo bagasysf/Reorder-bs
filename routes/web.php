@@ -27,3 +27,7 @@ Route::delete('admin/category/{id}', 'CategoryController@destroy');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin/dashboard', function () {
+    return 'Dashboard';
+})->name('dashboard');

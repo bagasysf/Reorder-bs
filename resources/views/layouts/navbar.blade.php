@@ -2,7 +2,7 @@
 <div class="row g-0 border garvice-navbar">
     <div class="col-4 col-sm-4 py-3 col-sm-3 col-lg-2 garvice-navbar-brand d-flex justify-content-start">
         <a href="/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="General Affair Service" class="ps-4">
-            <img class="img-fluid garvice-navbar-brand-img" src="{{ asset('img/brand/logo-reorder.svg') }}" alt="" />
+            <img class="img-fluid garvice-navbar-brand-img" src="{{ asset('img/brand/logo-garvice.svg') }}" alt="" />
         </a>
     </div>
 
