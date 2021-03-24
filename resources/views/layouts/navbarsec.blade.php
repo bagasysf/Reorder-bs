@@ -1,5 +1,5 @@
 <!-- Navbar Secindary Start -->
-<div class="row g-0 garvice-navbarsec">
+<div class="row g-0 garvice-navbarsec border">
     <div class="col-12">
         <ul class="d-flex flex-row list-unstyled justify-content-end garvice-navbarsec-ul">
             <a href="" class="d-flex align-items-center text-decoration-none fw-light px-2 px-sm-3 px-lg-5 garvice-navbarsec-link active">

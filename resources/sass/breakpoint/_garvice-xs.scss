@@ -89,8 +89,9 @@
             background-color: $background-active !important;
         }
         
-        &-link {
+        &-link, &-button {
             color: $text-color;
+            width: 100%;
 
             &:hover {
                 color: $text-color-hover;

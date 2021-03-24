@@ -14,10 +14,14 @@
     @include('layouts.navbarsec')
     <!-- Navbar Secondary End -->
 
-    <!-- Content Section Start -->
-    @include('layouts.content')
-    <!-- Content Section End -->
 
+    <!-- Content Section Start -->
+    <div class="row g-0">
+        @include('layouts.sidebar')
+
+        @yield('content')
+    </div>
+    <!-- Content Section End -->
 
     <!-- Optional JavaScript; choose one of the two! -->
 

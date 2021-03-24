@@ -82,11 +82,14 @@
   background-color: #d3ddf6 !important;
 }
 
-.garvice-sidebar .garvice-sidebar-box-link {
+.garvice-sidebar .garvice-sidebar-box-link,
+.garvice-sidebar .garvice-sidebar-box-button {
   color: #0f3057;
+  width: 100%;
 }
 
-.garvice-sidebar .garvice-sidebar-box-link:hover {
+.garvice-sidebar .garvice-sidebar-box-link:hover,
+.garvice-sidebar .garvice-sidebar-box-button:hover {
   color: cornflowerblue;
   background-color: #F3F2F1;
 }
