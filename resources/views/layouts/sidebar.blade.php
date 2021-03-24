@@ -6,16 +6,18 @@
                 <i class="bi bi-app-indicator pe-3"></i>Dashboard
             </li>
         </a>
-        <a href="{{ url('admin/category') }}" class="text-decoration-none text-start py-3 ps-4 garvice-sidebar-box-link {{request()->is('admin/category')?'active': ''}}">
+        @hasanyrole('warehouse')
+        <a href="{{ url('admin/warehouse/category') }}" class="text-decoration-none text-start py-3 ps-4 garvice-sidebar-box-link {{request()->is('admin/warehouse/category')?'active': ''}}">
             <li class="fw-bold">
                 <i class="bi bi-folder pe-3"></i>Category
             </li>
         </a>
-        <a href="{{ url('admin/product') }}" class="text-decoration-none text-start py-3 ps-4 garvice-sidebar-box-link {{request()->is('admin/product')?'active': ''}}">
+        <a href="{{ url('admin/warehouse/product') }}" class="text-decoration-none text-start py-3 ps-4 garvice-sidebar-box-link {{request()->is('admin/warehouse/product')?'active': ''}}">
             <li class="fw-bold">
                 <i class="bi bi-files-alt pe-3"></i>Product
             </li>
         </a>
+        @endrole
         <form action="{{ route('logout') }}" method="POST">
             @csrf
             <button class="btn btn-transparent text-start py-3 ps-4 garvice-sidebar-box-button">

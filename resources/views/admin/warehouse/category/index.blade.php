@@ -6,7 +6,7 @@
         <div class="col-8 text-center py-3 fw-bold garvice-content-header">
             <i class="bi bi-list-ul pe-2"></i>List Category
         </div>
-        <a href="{{ url('admin/category/create') }}" class="text-decoration-none text-dark col-4 col-sm-4 text-center py-3 fw-bold garvice-content-link-add">
+        <a href="{{ url('admin/warehouse/category/create') }}" class="text-decoration-none text-dark col-4 col-sm-4 text-center py-3 fw-bold garvice-content-link-add">
             <i class="bi bi-plus-square pe-2"></i>Add New Category
         </a>
         <div class="col-12">
@@ -41,7 +41,7 @@
                                 <a class="px-1 text-decoration-none" href="{{ url('admin/category', $category->id) }}/edit"><i class="bi bi-pen garvice-content-table-icon-edit"></i></a>
                             </td>
                             <td>
-                                <form action="{{ url('admin/category', $category->id) }}" method="POST">
+                                <form action="{{ url('admin/warehouse/category', $category->id) }}" method="POST">
                                     @csrf
                                     @method("DELETE")
                                     <button type="submit" class="bg-transparent border border-0 text-dark pt-2" href=""><i class="bi bi-x-square garvice-content-table-icon-delete"></i></button>

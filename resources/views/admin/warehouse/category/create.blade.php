@@ -9,12 +9,12 @@
                     <i class="bi bi-plus-square pe-2"></i>{{$title}}
                 </div>
                 <div class="col-12 px-4 pb-4">
-                    <form action="{{ url('admin/category') }}" method="POST" class="garvice-content-form">
+                    <form action="{{ url('admin/warehouse/category') }}" method="POST" class="garvice-content-form">
                         @csrf
                         <input type="text" name="name" class="form-control rounded-0 my-4" placeholder="Category name" aria-label="First name">
                         <input type="text" name="description" class="form-control rounded-0 my-4" placeholder="Description" aria-label="Last name">
                         <div class="d-flex justify-content-end">
-                            <a href="{{ url('admin/category') }}" class="btn btn-white border text-secondary garvice-content-form-link me-4 rounded-0">Cancel</a>
+                            <a href="{{ url('admin/warehouse/category') }}" class="btn btn-white border text-secondary garvice-content-form-link me-4 rounded-0">Cancel</a>
                             <button type="submit" class="btn btn-white border text-secondary garvice-content-form-button rounded-0">Submit</button>
                         </div>
                     </form>

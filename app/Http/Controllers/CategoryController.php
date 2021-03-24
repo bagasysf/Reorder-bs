@@ -11,7 +11,7 @@ class CategoryController extends Controller
     {
         $title = "Category";
         $categories = Category::paginate(5);
-        return view('admin.category.index', [
+        return view('admin.warehouse.category.index', [
             'title' => $title,
             'categories' => $categories
         ]);
@@ -21,7 +21,7 @@ class CategoryController extends Controller
     {
         $title = "Create Category";
         $categories = Category::orderBy('created_at', 'desc')->Paginate(3);
-        return view('admin.category.create', [
+        return view('admin.warehouse.category.create', [
             'title' => $title,
             'categories' => $categories
         ]);
@@ -34,7 +34,7 @@ class CategoryController extends Controller
             'description' => request('description')
         ]);
 
-        return redirect('admin/category');
+        return redirect('admin/warehouse/category');
     }
 
     public function edit($id)
@@ -42,7 +42,7 @@ class CategoryController extends Controller
         $title = "Edit Category";
         $categoryid = Category::where('id', $id)->first();
         $categories = Category::orderBy('created_at', 'desc')->Paginate(3);
-        return view('admin.category.edit', [
+        return view('admin.warehouse.category.edit', [
             'title' => $title,
             'categoryid' => $categoryid,
             'categories' => $categories
@@ -57,7 +57,7 @@ class CategoryController extends Controller
             'description' => request('description')
         ]);
 
-        return redirect('admin/category');
+        return redirect('admin/warehouse/category');
     }
 
     public function destroy($id)
@@ -65,6 +65,6 @@ class CategoryController extends Controller
         $categoryid = Category::where('id', $id)->first();
         $categoryid->delete();
 
-        return redirect('admin/category');
+        return redirect('admin/warehouse/category');
     }
 }

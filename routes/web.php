@@ -17,12 +17,12 @@ Route::get('/', function () {
     return view('layouts.signin');
 });
 
-Route::get('admin/category', 'CategoryController@index');
-Route::get('admin/category/create', 'CategoryController@create');
-Route::post('admin/category', 'CategoryController@store');
-Route::get('admin/category/{id}/edit', 'CategoryController@edit');
-Route::put('admin/category/{id}', 'CategoryController@update');
-Route::delete('admin/category/{id}', 'CategoryController@destroy');
+Route::get('admin/warehouse/category', 'CategoryController@index');
+Route::get('admin/warehouse/category/create', 'CategoryController@create');
+Route::post('admin/warehouse/category', 'CategoryController@store');
+Route::get('admin/warehouse/category/{id}/edit', 'CategoryController@edit');
+Route::put('admin/warehouse/category/{id}', 'CategoryController@update');
+Route::delete('admin/warehouse/category/{id}', 'CategoryController@destroy');
 
 Auth::routes();
 
@@ -31,3 +31,9 @@ Route::get('home', 'HomeController@index')->name('home');
 Route::get('admin/dashboard', function () {
     return view('admin/dashboard.index');
 })->name('dashboard');
+Route::middleware('role:admin|warehouse')->get('admin/warehouse/dashboard', function () {
+    return view('admin/warehouse/dashboard.index');
+})->name('warehouse-dashboard');
+Route::get('admin/mechanic/dashboard', function () {
+    return view('admin/mechanic/dashboard.index');
+})->name('mechanic-dashboard');
