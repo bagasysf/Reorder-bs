@@ -12,34 +12,34 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
-        // Role::create([
-        //     'name' => 'admin',
-        //     'guard_name' => 'web'
-        // ]);
+        Role::create([
+            'name' => 'admin',
+            'guard_name' => 'web'
+        ]);
 
-        // Role::create([
-        //     'name' => 'user',
-        //     'guard_name' => 'web'
-        // ]);
+        Role::create([
+            'name' => 'user',
+            'guard_name' => 'web'
+        ]);
 
-        // Role::create([
-        //     'name' => 'warehouse',
-        //     'guard_name' => 'web'
-        // ]);
+        Role::create([
+            'name' => 'warehouse',
+            'guard_name' => 'web'
+        ]);
 
-        // Role::create([
-        //     'name' => 'housekeeping',
-        //     'guard_name' => 'web'
-        // ]);
+        Role::create([
+            'name' => 'housekeeping',
+            'guard_name' => 'web'
+        ]);
 
-        // Role::create([
-        //     'name' => 'maintenance',
-        //     'guard_name' => 'web'
-        // ]);
+        Role::create([
+            'name' => 'maintenance',
+            'guard_name' => 'web'
+        ]);
 
-        // Role::create([
-        //     'name' => 'mechanic',
-        //     'guard_name' => 'web'
-        // ]);
+        Role::create([
+            'name' => 'mechanic',
+            'guard_name' => 'web'
+        ]);
     }
 }
