@@ -27,7 +27,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    // protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
@@ -41,12 +41,8 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user)
     {
-        if ($user->hasanyrole('admin|housekeeping|maintenance')) {
+        if ($user->hasanyrole('admin|warehouse|housekeeping|maintenance|mechanic')) {
             return redirect()->route('dashboard');
-        } elseif ($user->hasanyrole('warehouse')) {
-            return redirect()->route('warehouse-dashboard');
-        } elseif ($user->hasanyrole('mechanic')) {
-            return redirect()->route('mechanic-dashboard');
         }
     }
 }

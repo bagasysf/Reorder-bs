@@ -13,12 +13,12 @@
         </a>
         <div class="collapse" id="collapseWarehouse">
             <div class="card card-body p-0 border border-0">
-                <a href="{{ url('admin/category') }}" class="text-decoration-none text-start py-3 ps-5 garvice-sidebar-box-link {{request()->is('admin/category')?'active': ''}}">
+                <a href="{{ url('admin/warehouse/category') }}" class="text-decoration-none text-start py-3 ps-5 garvice-sidebar-box-link {{request()->is('admin/category')?'active': ''}}">
                     <li class="fw-bold">
                         <i class="pe-2"></i>Category
                     </li>
                 </a>
-                <a href="{{ url('admin/product') }}" class="text-decoration-none text-start py-3 ps-5 garvice-sidebar-box-link {{request()->is('admin/product')?'active': ''}}">
+                <a href="{{ url('admin/warehouse/product') }}" class="text-decoration-none text-start py-3 ps-5 garvice-sidebar-box-link {{request()->is('admin/product')?'active': ''}}">
                     <li class="fw-bold">
                         <i class="pe-2"></i>Product
                     </li>
@@ -33,9 +33,14 @@
         </a>
         <div class="collapse" id="collapseMechanic">
             <div class="card card-body p-0 border border-0">
-                <a href="{{ url('admin/category') }}" class="text-decoration-none text-start py-3 ps-5 garvice-sidebar-box-link {{request()->is('admin/category')?'active': ''}}">
+                <a href="{{ url('admin/mechanic/categoryrepair') }}" class="text-decoration-none text-start py-3 ps-5 garvice-sidebar-box-link {{request()->is('admin/category')?'active': ''}}">
                     <li class="fw-bold">
                         <i class="pe-2"></i>Category
+                    </li>
+                </a>
+                <a href="{{ url('admin/mechanic/subcategoryrepair') }}" class="text-decoration-none text-start py-3 ps-5 garvice-sidebar-box-link {{request()->is('admin/category')?'active': ''}}">
+                    <li class="fw-bold">
+                        <i class="pe-2"></i>Sub Category
                     </li>
                 </a>
                 <a href="{{ url('admin/product') }}" class="text-decoration-none text-start py-3 ps-5 garvice-sidebar-box-link {{request()->is('admin/product')?'active': ''}}">
