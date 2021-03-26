@@ -45,7 +45,7 @@
                 </a>
                 <a href="{{ url('admin/product') }}" class="text-decoration-none text-start py-3 ps-5 garvice-sidebar-box-link {{request()->is('admin/product')?'active': ''}}">
                     <li class="fw-bold">
-                        <i class="pe-2"></i>Service
+                        <i class="pe-2"></i>Repair
                     </li>
                 </a>
             </div>

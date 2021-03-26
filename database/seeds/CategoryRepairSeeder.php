@@ -12,15 +12,15 @@ class CategoryRepairSeeder extends Seeder
      */
     public function run()
     {
-        $body = CategoryRepair::create([
-            'name' => 'Body',
+        $electrical = CategoryRepair::create([
+            'name' => 'Electrical',
             'description' => '',
         ]);
         $machine = CategoryRepair::create([
             'name' => 'Machine',
             'description' => '',
         ]);
-        $machine = CategoryRepair::create([
+        $tire = CategoryRepair::create([
             'name' => 'Tire',
             'description' => '',
         ]);

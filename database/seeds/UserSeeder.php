@@ -1,9 +1,7 @@
 <?php
 
 use App\User;
-use Spatie\Permission\Models\Role as Roles;
 use Illuminate\Database\Seeder;
-use Spatie\Permission\Contracts\Role;
 
 class UserSeeder extends Seeder
 {

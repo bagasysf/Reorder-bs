@@ -12,7 +12,7 @@ class SubCategoryRepairSeeder extends Seeder
      */
     public function run()
     {
-        $Accu = SubCategoryRepair::create([
+        $accu = SubCategoryRepair::create([
             'categoryrepair_id' => '1',
             'name' => 'Accu',
             'description' => '',
