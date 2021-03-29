@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\Category;
+use App\Model\CategoryItem;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class CategoryItemController extends Controller
 {
     public function index()
     {
         $title = "Category";
-        $categories = Category::paginate(5);
-        return view('admin.warehouse.category.index', [
+        $categories = CategoryItem::paginate(5);
+        return view('admin.warehouse.categoryitem.index', [
             'title' => $title,
             'categories' => $categories
         ]);
@@ -20,8 +20,8 @@ class CategoryController extends Controller
     public function create()
     {
         $title = "Create Category";
-        $categories = Category::orderBy('created_at', 'desc')->Paginate(3);
-        return view('admin.warehouse.category.create', [
+        $categories = CategoryItem::orderBy('created_at', 'desc')->Paginate(3);
+        return view('admin.warehouse.categoryitem.create', [
             'title' => $title,
             'categories' => $categories
         ]);
@@ -29,20 +29,20 @@ class CategoryController extends Controller
 
     public function store()
     {
-        Category::create([
+        CategoryItem::create([
             'name' => request('name'),
             'description' => request('description')
         ]);
 
-        return redirect('admin/warehouse/category');
+        return redirect('admin/warehouse/categoryitem');
     }
 
     public function edit($id)
     {
         $title = "Edit Category";
-        $categoryid = Category::where('id', $id)->first();
-        $categories = Category::orderBy('created_at', 'desc')->Paginate(3);
-        return view('admin.warehouse.category.edit', [
+        $categoryid = CategoryItem::where('id', $id)->first();
+        $categories = CategoryItem::orderBy('created_at', 'desc')->Paginate(3);
+        return view('admin.warehouse.categoryitem.edit', [
             'title' => $title,
             'categoryid' => $categoryid,
             'categories' => $categories
@@ -51,20 +51,20 @@ class CategoryController extends Controller
 
     public function update($id)
     {
-        $categoryid = Category::where('id', $id)->first();
+        $categoryid = CategoryItem::where('id', $id)->first();
         $categoryid->update([
             'name' => request('name'),
             'description' => request('description')
         ]);
 
-        return redirect('admin/warehouse/category');
+        return redirect('admin/warehouse/categoryitem');
     }
 
     public function destroy($id)
     {
-        $categoryid = Category::where('id', $id)->first();
+        $categoryid = CategoryItem::where('id', $id)->first();
         $categoryid->delete();
 
-        return redirect('admin/warehouse/category');
+        return redirect('admin/warehouse/categoryitem');
     }
 }

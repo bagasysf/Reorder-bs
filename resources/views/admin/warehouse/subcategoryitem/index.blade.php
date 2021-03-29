@@ -4,10 +4,10 @@
 <div class="col-12 col-lg-10 g-0 border garvice-content">
     <div class="row g-0">
         <div class="col-8 text-center py-3 fw-bold garvice-content-header">
-            <i class="bi bi-list-ul pe-2"></i>List Category
+            <i class="bi bi-list-ul pe-2"></i>List Sub Category
         </div>
-        <a href="{{ url('admin/warehouse/category/create') }}" class="text-decoration-none text-dark col-4 col-sm-4 text-center py-3 fw-bold garvice-content-link-add">
-            <i class="bi bi-plus-square pe-2"></i>Add New Category
+        <a href="{{ url('admin/mechanic/subcategoryitem/create') }}" class="text-decoration-none text-dark col-4 col-sm-4 text-center py-3 fw-bold garvice-content-link-add">
+            <i class="bi bi-plus-square pe-2"></i>Add New Sub Category
         </a>
         <div class="col-12">
             <div class="garvice-content-overflow">
@@ -15,8 +15,8 @@
                     <thead>
                         <tr>
                             <th class="py-3 ps-3">No</th>
+                            <th class="py-3">Category</th>
                             <th class="py-3">Name</th>
-                            <th class="py-3">Description</th>
                             <th class="py-3">Created</th>
                             <th class="py-3">Updated</th>
                             <th colspan="2" class="py-3 pe-3">Customize</th>
@@ -27,21 +27,21 @@
                         $num=0;
                         @endphp
 
-                        @foreach($categories as $category)
+                        @foreach($subcategories as $subcategory)
                         @php
                         $num++;
                         @endphp
                         <tr>
                             <td class="py-3 ps-3">{{$num}}</th>
-                            <td class="py-3">{{$category->name}}</td>
-                            <td class="py-3">{{$category->description}}</td>
-                            <td class="py-3">{{$category->created_at}}</td>
-                            <td class="py-3">{{$category->updated_at}}</td>
+                            <td class="py-3">{{$subcategory->categoryitem->name}}</td>
+                            <td class="py-3">{{$subcategory->name}}</td>
+                            <td class="py-3">{{$subcategory->created_at}}</td>
+                            <td class="py-3">{{$subcategory->updated_at}}</td>
                             <td class="text-center py-3">
-                                <a class="px-1 text-decoration-none" href="{{ url('admin/warehouse/category', $category->id) }}/edit"><i class="bi bi-pen garvice-content-table-icon-edit"></i></a>
+                                <a class="px-1 text-decoration-none" href="{{ url('admin/mechanic/subcategoryitem', $subcategory->id) }}/edit"><i class="bi bi-pen garvice-content-table-icon-edit"></i></a>
                             </td>
                             <td>
-                                <form action="{{ url('admin/warehouse/category', $category->id) }}" method="POST">
+                                <form action="{{ url('admin/mechanic/subcategoryitem', $subcategory->id) }}" method="POST">
                                     @csrf
                                     @method("DELETE")
                                     <button type="submit" class="bg-transparent border border-0 text-dark pt-2" href=""><i class="bi bi-x-square garvice-content-table-icon-delete"></i></button>
@@ -54,7 +54,7 @@
                 <div class="row g-0 justify-content-center pt-3">
                     <div class="col-auto">
                         <span style="width: 30px;">
-                            {{ $categories->links('vendor.pagination.garvice-pagination') }}
+                            {{ $subcategories->links('vendor.pagination.garvice-pagination') }}
                         </span>
                     </div>
                 </div>

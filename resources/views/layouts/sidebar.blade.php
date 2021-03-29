@@ -13,14 +13,19 @@
         </a>
         <div class="collapse" id="collapseWarehouse">
             <div class="card card-body p-0 border border-0">
-                <a href="{{ url('admin/warehouse/category') }}" class="text-decoration-none text-start py-3 ps-5 garvice-sidebar-box-link {{request()->is('admin/category')?'active': ''}}">
+                <a href="{{ url('admin/warehouse/categoryitem') }}" class="text-decoration-none text-start py-3 ps-5 garvice-sidebar-box-link {{request()->is('admin/categoryitem')?'active': ''}}">
                     <li class="fw-bold">
-                        <i class="pe-2"></i>Category
+                        <i class="pe-2"></i>Category Item
                     </li>
                 </a>
-                <a href="{{ url('admin/warehouse/product') }}" class="text-decoration-none text-start py-3 ps-5 garvice-sidebar-box-link {{request()->is('admin/product')?'active': ''}}">
+                <a href="{{ url('admin/warehouse/subcategoryitem') }}" class="text-decoration-none text-start py-3 ps-5 garvice-sidebar-box-link {{request()->is('admin/product')?'active': ''}}">
                     <li class="fw-bold">
-                        <i class="pe-2"></i>Product
+                        <i class="pe-2"></i>Sub Category Item
+                    </li>
+                </a>
+                <a href="{{ url('admin/warehouse/productitem') }}" class="text-decoration-none text-start py-3 ps-5 garvice-sidebar-box-link {{request()->is('admin/product')?'active': ''}}">
+                    <li class="fw-bold">
+                        <i class="pe-2"></i>Product Item
                     </li>
                 </a>
             </div>
@@ -35,12 +40,12 @@
             <div class="card card-body p-0 border border-0">
                 <a href="{{ url('admin/mechanic/categoryrepair') }}" class="text-decoration-none text-start py-3 ps-5 garvice-sidebar-box-link {{request()->is('admin/category')?'active': ''}}">
                     <li class="fw-bold">
-                        <i class="pe-2"></i>Category
+                        <i class="pe-2"></i>Category Repair
                     </li>
                 </a>
                 <a href="{{ url('admin/mechanic/subcategoryrepair') }}" class="text-decoration-none text-start py-3 ps-5 garvice-sidebar-box-link {{request()->is('admin/category')?'active': ''}}">
                     <li class="fw-bold">
-                        <i class="pe-2"></i>Sub Category
+                        <i class="pe-2"></i>Sub Category Repair
                     </li>
                 </a>
                 <a href="{{ url('admin/product') }}" class="text-decoration-none text-start py-3 ps-5 garvice-sidebar-box-link {{request()->is('admin/product')?'active': ''}}">

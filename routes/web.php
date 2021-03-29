@@ -23,6 +23,24 @@ Route::get('/', function () {
 Route::get('admin/dashboard', 'DashboardController@index')->name('dashboard')->middleware('role:admin|warehouse|housekeeping|maintenance|mechanic');
 // Route Dashboard End
 
+// Route Category Item Warehouse Start
+Route::get('admin/warehouse/categoryitem', 'CategoryItemController@index');
+Route::get('admin/warehouse/categoryitem/create', 'CategoryItemController@create');
+Route::post('admin/warehouse/categoryitem', 'CategoryItemController@store');
+Route::get('admin/warehouse/categoryitem/{id}/edit', 'CategoryItemController@edit');
+Route::put('admin/warehouse/categoryitem/{id}', 'CategoryItemController@update');
+Route::delete('admin/warehouse/categoryitem/{id}', 'CategoryItemController@destroy');
+// Route Category Item Warehosue End
+
+// Route Sub Category Item Warehouse Start
+Route::get('admin/warehouse/subcategoryitem', 'SubCategoryItemController@index');
+Route::get('admin/warehouse/subcategoryitem/create', 'SubCategoryItemController@create');
+Route::post('admin/warehouse/subcategoryitem', 'SubCategoryItemController@store');
+Route::get('admin/warehouse/subcategoryitem/{id}/edit', 'SubCategoryItemController@edit');
+Route::put('admin/warehouse/subcategoryitem/{id}', 'SubCategoryItemController@update');
+Route::delete('admin/warehouse/subcategoryitem/{id}', 'SubCategoryItemController@destroy');
+// Route Sub Category Item Warehosue End
+
 // Route Category Repair Start
 Route::get('admin/mechanic/categoryrepair', 'CategoryRepairController@index')->middleware('role:admin|mechanic');
 Route::get('admin/mechanic/categoryrepair/create', 'CategoryRepairController@create')->middleware('role:admin|mechanic');
@@ -31,6 +49,7 @@ Route::get('admin/mechanic/categoryrepair/{id}/edit', 'CategoryRepairController@
 Route::put('admin/mechanic/categoryrepair/category/{id}', 'CategoryRepairController@update')->middleware('role:admin|mechanic');
 Route::delete('admin/mechanic/categoryrepair/{id}', 'CategoryRepairController@destroy')->middleware('role:admin|mechanic');
 // Route Category Repair End
+
 
 // Route Sub Category Repair Start
 Route::get('admin/mechanic/subcategoryrepair', 'SubCategoryRepairController@index')->middleware('role:admin|mechanic');
@@ -41,14 +60,6 @@ Route::get('admin/mechanic/subcategoryrepair', 'SubCategoryRepairController@inde
 // Route::delete('admin/mechanic/categoryrepair/{id}', 'CategoryRepairController@destroy');
 // Route Sub Category Repair End
 
-// Route Category Warehouse Start
-Route::get('admin/warehouse/category', 'CategoryController@index');
-Route::get('admin/warehouse/category/create', 'CategoryController@create');
-Route::post('admin/warehouse/category', 'CategoryController@store');
-Route::get('admin/warehouse/category/{id}/edit', 'CategoryController@edit');
-Route::put('admin/warehouse/category/{id}', 'CategoryController@update');
-Route::delete('admin/warehouse/category/{id}', 'CategoryController@destroy');
-// Route Category Warehosue End
 
 // Route Authenticated Start
 Auth::routes();
