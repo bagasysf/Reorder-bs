@@ -24,21 +24,21 @@ Route::get('admin/dashboard', 'DashboardController@index')->name('dashboard')->m
 // Route Dashboard End
 
 // Route Category Item Warehouse Start
-Route::get('admin/warehouse/categoryitem', 'CategoryItemController@index');
-Route::get('admin/warehouse/categoryitem/create', 'CategoryItemController@create');
-Route::post('admin/warehouse/categoryitem', 'CategoryItemController@store');
-Route::get('admin/warehouse/categoryitem/{id}/edit', 'CategoryItemController@edit');
-Route::put('admin/warehouse/categoryitem/{id}', 'CategoryItemController@update');
-Route::delete('admin/warehouse/categoryitem/{id}', 'CategoryItemController@destroy');
+Route::get('admin/warehouse/categoryitem', 'CategoryItemController@index')->middleware('role:admin|warehouse');
+Route::get('admin/warehouse/categoryitem/create', 'CategoryItemController@create')->middleware('role:admin|warehouse');
+Route::post('admin/warehouse/categoryitem', 'CategoryItemController@store')->middleware('role:admin|warehouse');
+Route::get('admin/warehouse/categoryitem/{id}/edit', 'CategoryItemController@edit')->middleware('role:admin|warehouse');
+Route::put('admin/warehouse/categoryitem/{id}', 'CategoryItemController@update')->middleware('role:admin|warehouse');
+Route::delete('admin/warehouse/categoryitem/{id}', 'CategoryItemController@destroy')->middleware('role:admin|warehouse');
 // Route Category Item Warehosue End
 
 // Route Sub Category Item Warehouse Start
-Route::get('admin/warehouse/subcategoryitem', 'SubCategoryItemController@index');
-Route::get('admin/warehouse/subcategoryitem/create', 'SubCategoryItemController@create');
-Route::post('admin/warehouse/subcategoryitem', 'SubCategoryItemController@store');
-Route::get('admin/warehouse/subcategoryitem/{id}/edit', 'SubCategoryItemController@edit');
-Route::put('admin/warehouse/subcategoryitem/{id}', 'SubCategoryItemController@update');
-Route::delete('admin/warehouse/subcategoryitem/{id}', 'SubCategoryItemController@destroy');
+Route::get('admin/warehouse/subcategoryitem', 'SubCategoryItemController@index')->middleware('role:admin|warehouse');
+Route::get('admin/warehouse/subcategoryitem/create', 'SubCategoryItemController@create')->middleware('role:admin|warehouse');
+Route::post('admin/warehouse/subcategoryitem', 'SubCategoryItemController@store')->middleware('role:admin|warehouse');
+Route::get('admin/warehouse/subcategoryitem/{id}/edit', 'SubCategoryItemController@edit')->middleware('role:admin|warehouse');
+Route::put('admin/warehouse/subcategoryitem/{id}', 'SubCategoryItemController@update')->middleware('role:admin|warehouse');
+Route::delete('admin/warehouse/subcategoryitem/{id}', 'SubCategoryItemController@destroy')->middleware('role:admin|warehouse');
 // Route Sub Category Item Warehosue End
 
 // Route Category Repair Start

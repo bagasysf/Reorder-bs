@@ -3,13 +3,13 @@
 @section('content')
 <div class="col-12 col-lg-10 g-0 border garvice-content">
     <div class="row g-0">
-        <div class="col-8 text-center py-3 fw-bold garvice-content-header">
+        <div class="col-8 text-center py-3 fw-bold garvice-content-header border">
             <i class="bi bi-list-ul pe-2"></i>List Sub Category
         </div>
-        <a href="{{ url('admin/mechanic/subcategoryitem/create') }}" class="text-decoration-none text-dark col-4 col-sm-4 text-center py-3 fw-bold garvice-content-link-add">
+        <a href="{{ url('admin/warehouse/subcategoryitem/create') }}" class="text-decoration-none text-dark col-4 col-sm-4 text-center py-3 fw-bold garvice-content-link-add border">
             <i class="bi bi-plus-square pe-2"></i>Add New Sub Category
         </a>
-        <div class="col-12">
+        <div class="col-12 border">
             <div class="garvice-content-overflow">
                 <table class="table table-borderless garvice-content-table">
                     <thead>
@@ -38,10 +38,10 @@
                             <td class="py-3">{{$subcategory->created_at}}</td>
                             <td class="py-3">{{$subcategory->updated_at}}</td>
                             <td class="text-center py-3">
-                                <a class="px-1 text-decoration-none" href="{{ url('admin/mechanic/subcategoryitem', $subcategory->id) }}/edit"><i class="bi bi-pen garvice-content-table-icon-edit"></i></a>
+                                <a class="px-1 text-decoration-none" href="{{ url('admin/warehouse/subcategoryitem', $subcategory->id) }}/edit"><i class="bi bi-pen garvice-content-table-icon-edit"></i></a>
                             </td>
                             <td>
-                                <form action="{{ url('admin/mechanic/subcategoryitem', $subcategory->id) }}" method="POST">
+                                <form action="{{ url('admin/warehouse/subcategoryitem', $subcategory->id) }}" method="POST">
                                     @csrf
                                     @method("DELETE")
                                     <button type="submit" class="bg-transparent border border-0 text-dark pt-2" href=""><i class="bi bi-x-square garvice-content-table-icon-delete"></i></button>
