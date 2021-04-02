@@ -1,6 +1,5 @@
 <?php
 
-use App\Model\SubCategoryRepair;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,6 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         $this->call(CategoryItemSeeder::class);
         $this->call(SubCategoryItemSeeder::class);
+        $this->call(ProductItemSeeder::class);
         $this->call(CategoryRepairSeeder::class);
         $this->call(SubCategoryRepairSeeder::class);
     }
