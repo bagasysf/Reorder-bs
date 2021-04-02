@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/signin.css') }}" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -70,7 +70,7 @@
                     <input type="checkbox" value="remember-me"> Remember me
                 </label>
             </div> -->
-            <button class="w-100 btn btn-lg bg-transparent border border-2 garvice-form-signin-button mt-4" type="submit">{{ __('Login') }}</button>
+            <button class="w-100 btn btn-lg bg-transparent garvice-form-signin-button mt-4" type="submit">{{ __('Login') }}</button>
             <p class="mt-4 mb-3 text-muted">&copy; Garvice - 2021</p>
         </form>
     </main>

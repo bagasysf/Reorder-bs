@@ -98,6 +98,13 @@
                 background-color: $background-hover;
             }
         }
+
+        &-button {
+            &:focus {
+                outline: none !important;
+                box-shadow: none !important;
+            }
+        }
     }
 }
 // Sidebar Style End
@@ -133,7 +140,6 @@
         & a {
             font-size: 0.7rem;
         }
-
         &-link {
             &:hover {
                 background-color: $background-hover;
@@ -149,3 +155,4 @@
     }
 }
 // Content Style End
+

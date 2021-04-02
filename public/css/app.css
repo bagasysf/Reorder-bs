@@ -94,6 +94,11 @@
   background-color: #F3F2F1;
 }
 
+.garvice-sidebar .garvice-sidebar-box-button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .garvice-content .garvice-content-link-add:hover {
   border-color: #edebe9;
   background-color: #F3F2F1;
